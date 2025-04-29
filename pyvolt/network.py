@@ -1,4 +1,3 @@
-import logging
 import numpy as np
 from enum import Enum
 
@@ -170,6 +169,9 @@ class System():
         list_PowerTransformerEnds = [elem for elem in res.values() if elem.__class__.__name__ == "PowerTransformerEnd"]
         list_Breakers = [elem for elem in res.values() if elem.__class__.__name__ == "Breaker"]
 
+        #dictionary to get voltage from element name
+        value_map = {1: 5, 2: 20, 3: 63, 4: 90, 5: 150, 6: 225, 7: 400, 9: 320}
+
         #create nodes
         for TPNode in list_TPNode:
             uuid_TPNode = TPNode.mRID
@@ -200,8 +202,12 @@ class System():
                         if obj_EnergyConsumer.mRID == obj_Terminal.ConductingEquipment.mRID:
                             pInj -= obj_EnergyConsumer.p
                             qInj -= obj_EnergyConsumer.q
-            
-            base_voltage = TPNode.BaseVoltage.nominalVoltage
+
+            #get nominal voltage from substation name
+            if TPNode.BaseVoltage is None:
+                base_voltage = value_map.get(int(TPNode.name[-1]), None)
+            else:
+                base_voltage = TPNode.BaseVoltage.nominalVoltage
             self.nodes.append(Node(name=name, uuid=uuid_TPNode, base_voltage=base_voltage, v_mag=vmag,
                                    base_apparent_power=base_apparent_power, v_phase=vphase,
                                    p=pInj, q=qInj, index=index))
@@ -216,7 +222,14 @@ class System():
             start_node = nodes[0]
             end_node = nodes[1]
 
-            base_voltage = ACLineSegment.BaseVoltage.nominalVoltage
+            #get nominal voltage from line name
+            if ACLineSegment.BaseVoltage is None:
+                if ACLineSegment.name[6] in ["B", "T", "G", "P"]:
+                    base_voltage = value_map.get(int(ACLineSegment.name[5]), None)
+                else:
+                    base_voltage = value_map.get(int(ACLineSegment.name[6]), None)
+            else:
+                base_voltage = ACLineSegment.BaseVoltage.nominalVoltage
             self.branches.append(Branch(uuid=uuid_ACLineSegment, r=ACLineSegment.r, x=ACLineSegment.x, 
                                         start_node=start_node, end_node=end_node, 
                                         base_voltage=base_voltage, base_apparent_power=base_apparent_power))
@@ -228,9 +241,16 @@ class System():
             start_node = nodes[0]
             end_node = nodes[1]
             
-            # base voltage = high voltage side (=primaryConnection)
+            #base voltage = high voltage side (=primaryConnection)
             primary_connection = self._get_primary_connection(list_PowerTransformerEnds, uuid_power_transformer)
-            base_voltage = primary_connection.BaseVoltage.nominalVoltage
+            #get nominal voltage from transformer name
+            if primary_connection.BaseVoltage is None:
+                if power_transformer.name[6] == "A" or power_transformer.name[6] == "T":
+                    base_voltage = value_map.get(int(power_transformer.name[10]), None)
+                else:
+                    base_voltage = value_map.get(int(power_transformer.name[6]), None)
+            else:
+                base_voltage = primary_connection.BaseVoltage.nominalVoltage
             self.branches.append(Branch(uuid=uuid_power_transformer, r=primary_connection.r, x=primary_connection.x,
                                         start_node=start_node, end_node=end_node, base_voltage=base_voltage,
                                         base_apparent_power=base_apparent_power))
@@ -245,9 +265,9 @@ class System():
             if is_open is False:
                 self.breakers[-1].close_breaker()
             else:
-                self.breakers[-1].ideal_connected_with = ''
+                self.breakers[-1].open_breaker()
 
-        #calculate admitance matrix
+        #calculate admittance matrix
         self.Ymatrix_calc()
 
     def _get_nodes(self, list_Terminals, elem_uuid):
