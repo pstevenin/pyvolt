@@ -222,6 +222,10 @@ class System():
             start_node = nodes[0]
             end_node = nodes[1]
 
+            #exclude line connected to one node with no voltage
+            if nodes[0] == False or nodes[1] == False:
+                continue
+
             #get nominal voltage from line name
             if ACLineSegment.BaseVoltage is None:
                 if ACLineSegment.name[6] in ["B", "T", "G", "P"]:
@@ -240,7 +244,10 @@ class System():
             nodes = self._get_nodes(list_Terminals, uuid_power_transformer)
             start_node = nodes[0]
             end_node = nodes[1]
-            
+
+            #exclude transformer connected to one node with no voltage
+            if nodes[0] == False or nodes[1] == False:
+                continue
             #base voltage = high voltage side (=primaryConnection)
             primary_connection = self._get_primary_connection(list_PowerTransformerEnds, uuid_power_transformer)
             #get nominal voltage from transformer name
@@ -259,6 +266,9 @@ class System():
         for obj_Breaker in list_Breakers:
             is_open = obj_Breaker.normalOpen
             nodes = self._get_nodes(list_Terminals, obj_Breaker.mRID)
+            #exclude breaker connected to one node with no voltage
+            if nodes[0] == False or nodes[1] == False:
+                continue
             self.breakers.append(Breaker(from_node=nodes[0], to_node=nodes[1], is_open=is_open))
 
             #if the breaker is open == closed --> close broker
