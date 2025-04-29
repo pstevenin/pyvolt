@@ -321,12 +321,10 @@ class System():
         :param elem_uuid: uuid of the power transformer for which the primary connection is searched
         :return: primary_connection
         """
-        primary_connection = None
         power_transformer_ends = []
 
         #search for two elements of class powertransformerend that point to the powertransformer with ID == elem_uuid
         for power_transformer_end in list_PowerTransformerEnds:
-            power_transformer = None
             if isinstance(power_transformer_end.PowerTransformer, list):
                 if len(power_transformer_end.PowerTransformer) != 1:
                     print('WARNING: len(power_transformer_end.PowerTransformer)!=1 for the element with uuid={}. \
@@ -338,12 +336,10 @@ class System():
             if power_transformer.mRID == elem_uuid:
                 power_transformer_ends.append(power_transformer_end)
 
-        if power_transformer_ends[0].BaseVoltage.nominalVoltage >= \
-                power_transformer_ends[1].BaseVoltage.nominalVoltage:
-            primary_connection=power_transformer_ends[0]
-        elif power_transformer_ends[1].BaseVoltage.nominalVoltage >= \
-                power_transformer_ends[0].BaseVoltage.nominalVoltage:
-            primary_connection=power_transformer_ends[1]
+        if power_transformer_ends[0].endNumber == 1:
+            primary_connection = power_transformer_ends[0]
+        else:
+            primary_connection = power_transformer_ends[1]
 
         return primary_connection
 
