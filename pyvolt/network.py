@@ -264,7 +264,7 @@ class System():
 
         #create breakers
         for obj_Breaker in list_Breakers:
-            is_open = obj_Breaker.normalOpen
+            is_open = obj_Breaker.open
             nodes = self._get_nodes(list_Terminals, obj_Breaker.mRID)
             #exclude breaker connected to one node with no voltage
             if nodes[0] == False or nodes[1] == False:
