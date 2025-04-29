@@ -18,7 +18,7 @@ class BusType(Enum):
 
 class Node():
     def __init__(self, uuid='', name='', base_voltage=1.0, base_apparent_power=1.0, v_mag=0.0,
-                 v_phase=0.0, p=0.0, q=0.0, index=0, ideal_connected_with=''):
+                 v_phase=0.0, p=0.0, q=0.0, index=0, ideal_connected_with='a'):
         self.uuid = uuid
         self.name = name
         self.index = index
@@ -85,14 +85,6 @@ class Breaker():
             string = string + key + '={}\n'.format(attributes[key])
         return string
 
-    def open_breaker(self):
-        self.is_open = True
-        self.to_node.ideal_connected_with = ''
-
-    def close_breaker(self):
-        self.is_open = False
-        self.to_node.ideal_connected_with = self.from_node.uuid
-
 
 class System():
     def __init__(self):
@@ -132,23 +124,25 @@ class System():
 
         return nodes_num
 
-    def reindex_nodes_list(self):
-        """
-        Re-enumerate the nodes in system.nodes
-        If any node is ideally connected to another node, 
-        both receive the same index
-        """
-        index = 0
-        remaining_nodes_list = []
+    def reassign_connected(self):
+        # group nodes per index
+        grouped_objects = {}
         for node in self.nodes:
-            if node.ideal_connected_with == '':
-                node.index = index
-                index += 1
-            else:
-                remaining_nodes_list.append(node)
+            idx = node.index
+            if idx not in grouped_objects:
+                grouped_objects[idx] = []
+            grouped_objects[idx].append(node)
 
-        for node in remaining_nodes_list:
-            node.index = self.get_node_by_uuid(node.ideal_connected_with).index
+        # attribute ideal_connected_with to each group
+        for idx, group in grouped_objects.items():
+            found = False
+            for obj in group:
+                if obj.type.name in ["PQ", "SLACK"]:
+                    obj.ideal_connected_with = ""
+                    found = True
+                    break
+            if not found:
+                group[0].ideal_connected_with = ""
              
     def load_cim_data(self, res, base_apparent_power):
         """
@@ -301,6 +295,9 @@ class System():
                 index_count += 1
             item.index = new_index[item.index]
 
+        #reassign ideal_connected_with parameter to get correct node type
+        self.reassign_connected()
+
         #calculate admittance matrix
         self.Ymatrix_calc()
 
@@ -392,7 +389,6 @@ class System():
                     node.type = BusType["PV"]
 
     def Ymatrix_calc(self):
-        self.reindex_nodes_list()
         nodes_num = self.get_nodes_num()
         self.Ymatrix = np.zeros((nodes_num, nodes_num), dtype=np.complex128)
         self.Bmatrix = np.zeros((nodes_num, nodes_num), dtype=np.complex128)
