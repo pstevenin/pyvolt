@@ -1,3 +1,4 @@
+import networkx as nx
 import numpy as np
 from enum import Enum
 
@@ -269,6 +270,32 @@ class System():
             if nodes[0] == False or nodes[1] == False:
                 continue
             self.breakers.append(Breaker(from_node=nodes[0], to_node=nodes[1], is_open=is_open))
+
+        #create graph from nodes, branches and breakers
+        graph_nx = nx.Graph()
+        for node in self.nodes:
+            graph_nx.add_node(node.index, name=node.uuid)
+        for branch in self.branches:
+            graph_nx.add_edge(branch.start_node.index, branch.end_node.index)
+        for breaker in self.breakers:
+            if not breaker.is_open:  # Ajouter uniquement les liens non rompus
+                graph_nx.add_edge(breaker.from_node.index, breaker.to_node.index)
+
+        #find related component
+        components = list(nx.connected_components(graph_nx))
+
+        #find largest related component
+        largest_component = max(components, key=len)
+
+        #find disconnected nodes
+        nodes_to_remove = set(graph_nx.nodes()) - largest_component
+        graph_nx.remove_nodes_from(nodes_to_remove)
+
+        #delete nodes, branches and breakers disconnected from network
+        self.nodes = [b for b in self.nodes if b.index in graph_nx]
+        self.branches = [b for b in self.branches if
+                         b.start_node.index in graph_nx and b.end_node.index in graph_nx]
+        self.breakers = [b for b in self.breakers if b.from_node.index in graph_nx and b.to_node.index in graph_nx]
 
         #dictionary to stock connections
         connections = {node.uuid: node.uuid for node in self.nodes}
