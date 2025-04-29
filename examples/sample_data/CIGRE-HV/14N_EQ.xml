@@ -1,0 +1,2521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"	xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#" xmlns:entsoe="http://entsoe.eu/CIM/SchemaExtension/3/1#"  xmlns:md="http://iec.ch/TC57/61970-552/ModelDescription/1#"  xmlns:qodc="https://www.entsoe.eu/CGMES2_4_15/QoCDC/3/2" >
+<md:FullModel rdf:about="urn:uuid:18dde9c5-79ca-4467-915f-b4bd9e16edbd">
+<md:Model.scenarioTime>2025-03-07T12:47:00Z</md:Model.scenarioTime>
+<md:Model.created>2025-04-08T07:45:00Z</md:Model.created>
+<md:Model.description>&lt;MDE&gt;&lt;BP&gt;Other&lt;/BP&gt;&lt;TOOL&gt;Convergence 8.10.2&lt;/TOOL&gt;&lt;TXT&gt;&lt;/TXT&gt;&lt;/MDE&gt;</md:Model.description>
+<md:Model.version>000</md:Model.version>
+<md:Model.profile>http://entsoe.eu/CIM/EquipmentCore/3/1</md:Model.profile>
+<md:Model.DependentOn rdf:resource="urn:uuid:07027332-670c-4d57-b9d5-bb4c75c62ad5" />
+<md:Model.modelingAuthoritySet>http://www.rte-france.com/OperationalPlanning</md:Model.modelingAuthoritySet>
+</md:FullModel>
+<cim:CurveData rdf:ID="_00d80333-fff5-536d-92b7-137d6aef513d">
+	<cim:CurveData.xvalue>0</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-600</cim:CurveData.y1value>
+	<cim:CurveData.y2value>400</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_b0146faf-4a18-50b4-a8ac-b1ec6bfe8895"/>
+</cim:CurveData>
+<cim:SynchronousMachine rdf:ID="_0187fa29-7812-51ee-8327-598b771b9ca9">
+	<cim:SynchronousMachine.type rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#SynchronousMachineKind.generator"/>
+	<cim:SynchronousMachine.InitialReactiveCapabilityCurve rdf:resource="#_6d09f645-223d-5c02-bd76-6f4c054536cf"/>
+	<cim:RotatingMachine.ratedS>50</cim:RotatingMachine.ratedS>
+	<cim:RotatingMachine.GeneratingUnit rdf:resource="#_1113189b-ea87-58da-887b-e63c71e321c2"/>
+	<cim:RegulatingCondEq.RegulatingControl rdf:resource="#_2d29b93e-7c55-5a17-89bd-e671c4840877"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_0fcb398e-723d-54ec-ab4d-07d266504d31"/>
+	<cim:IdentifiedObject.name>BATTE</cim:IdentifiedObject.name>
+</cim:SynchronousMachine>
+<cim:ACLineSegment rdf:ID="_02d2c776-2bc4-594d-8add-1a29cd67836b">
+	<cim:ACLineSegment.bch>0.0004</cim:ACLineSegment.bch>
+	<cim:ACLineSegment.gch>0</cim:ACLineSegment.gch>
+	<cim:ACLineSegment.r>3</cim:ACLineSegment.r>
+	<cim:ACLineSegment.x>30</cim:ACLineSegment.x>
+	<cim:ConductingEquipment.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:IdentifiedObject.name>LYON1L72PARIS</cim:IdentifiedObject.name>
+</cim:ACLineSegment>
+<cim:PhaseTapChangerTabular rdf:ID="_02fa0642-7f0b-5cb6-bd1c-dd3afe616de2">
+	<cim:PhaseTapChangerTabular.PhaseTapChangerTable rdf:resource="#_3740a871-4c3d-5bf6-a925-946a5d75a394"/>
+	<cim:PhaseTapChanger.TransformerEnd rdf:resource="#_aa3315ac-6207-5011-b12e-26aba71e9f82"/>
+	<cim:TapChanger.highStep>5</cim:TapChanger.highStep>
+	<cim:TapChanger.lowStep>1</cim:TapChanger.lowStep>
+	<cim:TapChanger.ltcFlag>true</cim:TapChanger.ltcFlag>
+	<cim:TapChanger.neutralStep>3</cim:TapChanger.neutralStep>
+	<cim:TapChanger.neutralU>63</cim:TapChanger.neutralU>
+	<cim:TapChanger.normalStep>3</cim:TapChanger.normalStep>
+	<cim:TapChanger.TapChangerControl rdf:resource="#_dcb39c6f-a69e-5167-ab2c-ca7b9e7d9d85"/>
+	<cim:IdentifiedObject.name>NANCYY631</cim:IdentifiedObject.name>
+</cim:PhaseTapChangerTabular>
+<cim:LinearShuntCompensator rdf:ID="_03f09831-1932-5651-9178-e7d5c3d17d76">
+	<cim:LinearShuntCompensator.bPerSection>0.00251953</cim:LinearShuntCompensator.bPerSection>
+	<cim:LinearShuntCompensator.gPerSection>0</cim:LinearShuntCompensator.gPerSection>
+	<cim:ShuntCompensator.maximumSections>1</cim:ShuntCompensator.maximumSections>
+	<cim:ShuntCompensator.nomU>63</cim:ShuntCompensator.nomU>
+	<cim:ShuntCompensator.normalSections>0</cim:ShuntCompensator.normalSections>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_19ca914a-4524-51d1-81e8-840ec255ec2f"/>
+	<cim:IdentifiedObject.name>CAPA2</cim:IdentifiedObject.name>
+</cim:LinearShuntCompensator>
+<cim:RatioTapChangerTablePoint rdf:ID="_054ed9e4-0176-5714-9199-99505b0c2d66">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_d0f9ee26-f8ca-5f67-8a62-77edbd5b6922"/>
+	<cim:TapChangerTablePoint.ratio>1</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>2</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Terminal rdf:ID="_056afce6-2fe3-5a5a-9858-cfe859477c27">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_aaf84861-1470-5433-b766-27dcbb61a41e"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LYON1P7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChangerTable rdf:ID="_05b8eee7-8f81-5c33-a31f-67c1460e2b53">
+	<cim:IdentifiedObject.name>LYON1Y631</cim:IdentifiedObject.name>
+</cim:RatioTapChangerTable>
+<cim:DCNode rdf:ID="_05ccb2ac-8b27-5095-aaca-a03e3ed4a836">
+	<cim:DCNode.DCEquipmentContainer rdf:resource="#_25d3bbc4-de77-5f6b-8755-5b0c03b1f8fc"/>
+	<cim:IdentifiedObject.name>LILLEL91NANTE</cim:IdentifiedObject.name>
+</cim:DCNode>
+<cim:RatioTapChangerTablePoint rdf:ID="_0635d7e5-9416-5747-af4e-74da7c0b66b4">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>1.01142</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>13</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:RatioTapChangerTablePoint rdf:ID="_065010f8-c483-5d2a-94f0-409286aada64">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>0.898521</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>2</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Terminal rdf:ID="_0679769b-341b-59ca-8cde-af27f59a578b">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_27429a27-5439-517c-bdbf-2d4bf335f45f"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_06ced739-1df4-572d-8866-8d4140b4dd88">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_20ca12bd-1331-5292-a0ca-9934726d46b4"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_0979ce22-9444-5bb2-9dee-65bb5c6417fc">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_20ca12bd-1331-5292-a0ca-9934726d46b4"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:NuclearGeneratingUnit rdf:ID="_09bad6ec-3640-5631-aee8-7f9d162217cd">
+	<cim:GeneratingUnit.initialP>1500</cim:GeneratingUnit.initialP>
+	<cim:GeneratingUnit.longPF>0.04</cim:GeneratingUnit.longPF>
+	<cim:GeneratingUnit.maxOperatingP>1500</cim:GeneratingUnit.maxOperatingP>
+	<cim:GeneratingUnit.minOperatingP>500</cim:GeneratingUnit.minOperatingP>
+	<cim:GeneratingUnit.nominalP>1500</cim:GeneratingUnit.nominalP>
+	<cim:GeneratingUnit.shortPF>0.04</cim:GeneratingUnit.shortPF>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_1aa6b7f9-24d0-5569-83df-3872cecb2707"/>
+	<cim:IdentifiedObject.name>NUCL2</cim:IdentifiedObject.name>
+</cim:NuclearGeneratingUnit>
+<cim:ACLineSegment rdf:ID="_0a4d576e-257c-5f42-93ef-dacfd04a7a60">
+	<cim:ACLineSegment.bch>0.0004</cim:ACLineSegment.bch>
+	<cim:ACLineSegment.gch>0</cim:ACLineSegment.gch>
+	<cim:ACLineSegment.r>3</cim:ACLineSegment.r>
+	<cim:ACLineSegment.x>30</cim:ACLineSegment.x>
+	<cim:ConductingEquipment.BaseVoltage rdf:resource="#_63893f24-5b4e-407c-9a1e-4ff71121f33c"/>
+	<cim:IdentifiedObject.name>LILLEL61NANCY</cim:IdentifiedObject.name>
+</cim:ACLineSegment>
+<cim:BusbarSection rdf:ID="_0a849f8c-3add-5cc9-9837-a9d2e513af6a">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_5e22acad-d30d-5cd6-a20f-ee7e34626f5b"/>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:ACLineSegment rdf:ID="_0adece55-254b-5d1c-87f6-d443e1e8f4ec">
+	<cim:ACLineSegment.bch>0.00028</cim:ACLineSegment.bch>
+	<cim:ACLineSegment.gch>0</cim:ACLineSegment.gch>
+	<cim:ACLineSegment.r>2.1</cim:ACLineSegment.r>
+	<cim:ACLineSegment.x>21</cim:ACLineSegment.x>
+	<cim:ConductingEquipment.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:IdentifiedObject.name>PARISL71ZNANT</cim:IdentifiedObject.name>
+</cim:ACLineSegment>
+<cim:Terminal rdf:ID="_0afbca96-be85-510b-a530-0cbae9784542">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_94d552ae-af68-5bb8-9573-c20c5f52b3e6"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:ACLineSegment rdf:ID="_0bbefa61-cd19-533a-bb08-a7c2185e4724">
+	<cim:ACLineSegment.bch>0.0004</cim:ACLineSegment.bch>
+	<cim:ACLineSegment.gch>0</cim:ACLineSegment.gch>
+	<cim:ACLineSegment.r>3</cim:ACLineSegment.r>
+	<cim:ACLineSegment.x>30</cim:ACLineSegment.x>
+	<cim:ConductingEquipment.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:IdentifiedObject.name>LILLEL71LYON1</cim:IdentifiedObject.name>
+</cim:ACLineSegment>
+<cim:Terminal rdf:ID="_0ca3c53f-edc6-5450-b074-9793a0c8a02c">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_b19f9614-f5fe-5338-963d-070e7a70a580"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_0cce73c7-1d54-5041-abde-2823a03e6a52">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_2ffc025d-31ef-5979-86c7-a9599831b30c"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LOAD2</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_0d2efaaa-4d67-5c0a-9ee8-b91c67d629cd">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_a01aef53-0b71-5877-a1d2-4857c976704e"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>WIND</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_0d3e0eb4-adee-55d8-a88e-aaff0f8762f7">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_881e6a58-8936-5058-84f9-5ba3842c9112"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>CAPA1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:DCNode rdf:ID="_0d6e28dc-4f64-57b5-b9b2-5f1d795fc591">
+	<cim:DCNode.DCEquipmentContainer rdf:resource="#_274dd1ba-4081-5f1a-9b8a-ad5bceaa0be8"/>
+	<cim:IdentifiedObject.name>LILLEL91NANTE</cim:IdentifiedObject.name>
+</cim:DCNode>
+<cim:VsConverter rdf:ID="_0dfaea66-aa19-5acd-944f-35d3c44b418d">
+	<cim:VsConverter.CapabilityCurve rdf:resource="#_775f612a-af08-5570-b4a2-7b296b72b783"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_25d3bbc4-de77-5f6b-8755-5b0c03b1f8fc"/>
+	<cim:IdentifiedObject.name>LILLEL91NANTE_Or</cim:IdentifiedObject.name>
+</cim:VsConverter>
+<cim:Terminal rdf:ID="_0e851dfb-ff1d-5a35-9e5c-594518271989">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_03f09831-1932-5651-9178-e7d5c3d17d76"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>CAPA2</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:ACLineSegment rdf:ID="_0ed454d9-5cb4-5d6a-a52a-7c95fcb5f92a">
+	<cim:ACLineSegment.bch>0.0004</cim:ACLineSegment.bch>
+	<cim:ACLineSegment.gch>0</cim:ACLineSegment.gch>
+	<cim:ACLineSegment.r>3</cim:ACLineSegment.r>
+	<cim:ACLineSegment.x>30</cim:ACLineSegment.x>
+	<cim:ConductingEquipment.BaseVoltage rdf:resource="#_baf92707-8261-5edd-8f51-1720817ba5b7"/>
+	<cim:IdentifiedObject.name>LYON1L31NANCY</cim:IdentifiedObject.name>
+</cim:ACLineSegment>
+<cim:VoltageLevel rdf:ID="_0fcb398e-723d-54ec-ab4d-07d266504d31">
+	<cim:VoltageLevel.highVoltageLimit>69</cim:VoltageLevel.highVoltageLimit>
+	<cim:VoltageLevel.lowVoltageLimit>58</cim:VoltageLevel.lowVoltageLimit>
+	<cim:VoltageLevel.BaseVoltage rdf:resource="#_baf92707-8261-5edd-8f51-1720817ba5b7"/>
+	<cim:VoltageLevel.Substation rdf:resource="#_4f1f6efc-0dc5-5219-9b8d-ff3f8f91a46d"/>
+	<cim:IdentifiedObject.name>LYON1P3</cim:IdentifiedObject.name>
+</cim:VoltageLevel>
+<cim:Terminal rdf:ID="_1025a07d-8f9b-5836-94e5-2e986ea30811">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_6508ff71-60a4-52b9-aa5c-11abe867cfa1"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEY761</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_1112ca9f-aed8-53b5-a330-060b3bedba94">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_187065dc-6a47-527a-8b87-7f3b651a8bcf"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>BORDEL61NANCY</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:HydroGeneratingUnit rdf:ID="_1113189b-ea87-58da-887b-e63c71e321c2">
+	<cim:HydroGeneratingUnit.energyConversionCapability rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#HydroEnergyConversionKind.pumpAndGenerator"/>
+	<cim:GeneratingUnit.initialP>20</cim:GeneratingUnit.initialP>
+	<cim:GeneratingUnit.longPF>0.02</cim:GeneratingUnit.longPF>
+	<cim:GeneratingUnit.maxOperatingP>20</cim:GeneratingUnit.maxOperatingP>
+	<cim:GeneratingUnit.minOperatingP>0</cim:GeneratingUnit.minOperatingP>
+	<cim:GeneratingUnit.nominalP>20</cim:GeneratingUnit.nominalP>
+	<cim:GeneratingUnit.shortPF>0.02</cim:GeneratingUnit.shortPF>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4f1f6efc-0dc5-5219-9b8d-ff3f8f91a46d"/>
+	<cim:IdentifiedObject.name>BATTE</cim:IdentifiedObject.name>
+</cim:HydroGeneratingUnit>
+<cim:Terminal rdf:ID="_112a822b-266d-50c0-bde7-0e44a212b587">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_8e134d04-b50c-5897-92ad-4de091ac7b96"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChangerTablePoint rdf:ID="_125f5d54-eee5-5dc7-aac0-a7536147793f">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>1.04731</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>16</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:RatioTapChangerTablePoint rdf:ID="_13a06002-783b-50ae-8cfa-4a5eb95c589f">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>1.11315</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>21</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:PowerTransformerEnd rdf:ID="_14813226-e192-56ef-9e53-1825316f1429">
+	<cim:PowerTransformerEnd.b>0</cim:PowerTransformerEnd.b>
+	<cim:PowerTransformerEnd.connectionKind rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#WindingConnection.D"/>
+	<cim:PowerTransformerEnd.g>0</cim:PowerTransformerEnd.g>
+	<cim:PowerTransformerEnd.r>2.3001</cim:PowerTransformerEnd.r>
+	<cim:PowerTransformerEnd.ratedS>70</cim:PowerTransformerEnd.ratedS>
+	<cim:PowerTransformerEnd.ratedU>220.267</cim:PowerTransformerEnd.ratedU>
+	<cim:PowerTransformerEnd.x>79.545</cim:PowerTransformerEnd.x>
+	<cim:PowerTransformerEnd.PowerTransformer rdf:resource="#_3142e555-b04d-5c2f-8bdc-7ddcfeb68bc7"/>
+	<cim:TransformerEnd.endNumber>1</cim:TransformerEnd.endNumber>
+	<cim:TransformerEnd.BaseVoltage rdf:resource="#_63893f24-5b4e-407c-9a1e-4ff71121f33c"/>
+	<cim:TransformerEnd.Terminal rdf:resource="#_6a2d470d-858c-5b54-8698-4ed8674667a7"/>
+	<cim:IdentifiedObject.name>NANCYY631</cim:IdentifiedObject.name>
+</cim:PowerTransformerEnd>
+<cim:BusbarSection rdf:ID="_1482a39f-14cd-52ed-b4f4-07610006a259">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_7559d352-e87f-5937-8889-a2fd830feb6a"/>
+	<cim:IdentifiedObject.name>1B2</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:BusbarSection rdf:ID="_14c56f25-fc4e-5003-9185-2c466cc89e90">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_3b1414ac-eb55-54c7-915f-d3ba00c301be"/>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:RatioTapChangerTablePoint rdf:ID="_16367475-3b16-52ff-a369-a66c24262f84">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_5c134967-ff99-560b-97b8-cbfeee4b073e"/>
+	<cim:TapChangerTablePoint.ratio>1.11111</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>3</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:StaticVarCompensator rdf:ID="_179743c9-9fb2-5afa-b054-c2058c62e84e">
+	<cim:StaticVarCompensator.capacitiveRating>253.125</cim:StaticVarCompensator.capacitiveRating>
+	<cim:StaticVarCompensator.inductiveRating>-506.25</cim:StaticVarCompensator.inductiveRating>
+	<cim:StaticVarCompensator.slope>0</cim:StaticVarCompensator.slope>
+	<cim:StaticVarCompensator.sVCControlMode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#SVCControlMode.voltage"/>
+	<cim:StaticVarCompensator.voltageSetPoint>225</cim:StaticVarCompensator.voltageSetPoint>
+	<cim:RegulatingCondEq.RegulatingControl rdf:resource="#_75f4ab76-2e2b-5f4d-a2c8-dd2f551d0d4a"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4dd9513d-c4ad-57ef-b673-1b0c606868d6"/>
+	<cim:IdentifiedObject.name>SVC1</cim:IdentifiedObject.name>
+</cim:StaticVarCompensator>
+<cim:SubGeographicalRegion rdf:ID="_17cf7116-571a-59aa-9988-dd181f33d9b1">
+	<cim:SubGeographicalRegion.Region rdf:resource="#_46e7220b-0e75-59db-9a7d-6dada29a78de"/>
+	<cim:IdentifiedObject.name>RTE-LILLE</cim:IdentifiedObject.name>
+</cim:SubGeographicalRegion>
+<cim:RatioTapChangerTablePoint rdf:ID="_17fb7e5d-05b1-5770-986c-22b624554ce6">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>0.97791</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>10</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:OperationalLimitSet rdf:ID="_184f787f-930c-5a62-bcc8-27cbb0f38618">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_44ce7c63-542d-54c4-92c5-238f92608666"/>
+	<cim:IdentifiedObject.name>LILLEL71MARSE</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:ACLineSegment rdf:ID="_187065dc-6a47-527a-8b87-7f3b651a8bcf">
+	<cim:ACLineSegment.bch>0.0004</cim:ACLineSegment.bch>
+	<cim:ACLineSegment.gch>0</cim:ACLineSegment.gch>
+	<cim:ACLineSegment.r>3</cim:ACLineSegment.r>
+	<cim:ACLineSegment.x>30</cim:ACLineSegment.x>
+	<cim:ConductingEquipment.BaseVoltage rdf:resource="#_63893f24-5b4e-407c-9a1e-4ff71121f33c"/>
+	<cim:IdentifiedObject.name>BORDEL61NANCY</cim:IdentifiedObject.name>
+</cim:ACLineSegment>
+<cim:LoadResponseCharacteristic rdf:ID="_189de51c-761b-5e8f-90a5-a8415243ddf7">
+	<cim:LoadResponseCharacteristic.exponentModel>true</cim:LoadResponseCharacteristic.exponentModel>
+	<cim:LoadResponseCharacteristic.pVoltageExponent>0</cim:LoadResponseCharacteristic.pVoltageExponent>
+	<cim:LoadResponseCharacteristic.qVoltageExponent>0</cim:LoadResponseCharacteristic.qVoltageExponent>
+	<cim:IdentifiedObject.name>LOAD2</cim:IdentifiedObject.name>
+</cim:LoadResponseCharacteristic>
+<cim:ACDCConverterDCTerminal rdf:ID="_19084e6e-e693-518d-b86e-86fca96712dc">
+	<cim:ACDCConverterDCTerminal.DCConductingEquipment rdf:resource="#_bb139321-74a4-582a-9964-a65d317e00ff"/>
+	<cim:DCBaseTerminal.DCNode rdf:resource="#_0d6e28dc-4f64-57b5-b9b2-5f1d795fc591"/>
+	<cim:IdentifiedObject.name>LILLEL91NANTE</cim:IdentifiedObject.name>
+</cim:ACDCConverterDCTerminal>
+<cim:VoltageLevel rdf:ID="_19ca914a-4524-51d1-81e8-840ec255ec2f">
+	<cim:VoltageLevel.highVoltageLimit>69</cim:VoltageLevel.highVoltageLimit>
+	<cim:VoltageLevel.lowVoltageLimit>58</cim:VoltageLevel.lowVoltageLimit>
+	<cim:VoltageLevel.BaseVoltage rdf:resource="#_baf92707-8261-5edd-8f51-1720817ba5b7"/>
+	<cim:VoltageLevel.Substation rdf:resource="#_dafed079-1379-51ad-8f78-3725f12c3fbd"/>
+	<cim:IdentifiedObject.name>NANCYP3</cim:IdentifiedObject.name>
+</cim:VoltageLevel>
+<cim:CurveData rdf:ID="_1a3f0bac-03f1-562c-8a7d-a09a886b1a2f">
+	<cim:CurveData.xvalue>1000</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-300</cim:CurveData.y1value>
+	<cim:CurveData.y2value>300</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_f85bc0d3-e562-5bf9-beac-8d70ecbc94a9"/>
+</cim:CurveData>
+<cim:BusbarSection rdf:ID="_1a9bac94-25da-515e-8f4d-39d30b7ae16b">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_7559d352-e87f-5937-8889-a2fd830feb6a"/>
+	<cim:IdentifiedObject.name>1A1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:Substation rdf:ID="_1aa6b7f9-24d0-5569-83df-3872cecb2707">
+	<cim:Substation.Region rdf:resource="#_17cf7116-571a-59aa-9988-dd181f33d9b1"/>
+	<cim:IdentifiedObject.name>LILLE</cim:IdentifiedObject.name>
+</cim:Substation>
+<cim:Terminal rdf:ID="_1ced3782-b42f-50e2-8db4-e9ad9f7e9892">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_1f869fd8-edbe-581d-a04c-dfdbd8a6a754"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL61LYON1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:ACLineSegment rdf:ID="_1f869fd8-edbe-581d-a04c-dfdbd8a6a754">
+	<cim:ACLineSegment.bch>0.0004</cim:ACLineSegment.bch>
+	<cim:ACLineSegment.gch>0</cim:ACLineSegment.gch>
+	<cim:ACLineSegment.r>3</cim:ACLineSegment.r>
+	<cim:ACLineSegment.x>30</cim:ACLineSegment.x>
+	<cim:ConductingEquipment.BaseVoltage rdf:resource="#_63893f24-5b4e-407c-9a1e-4ff71121f33c"/>
+	<cim:IdentifiedObject.name>LILLEL61LYON1</cim:IdentifiedObject.name>
+</cim:ACLineSegment>
+<cim:OperationalLimitSet rdf:ID="_1fcd52c1-c653-58c7-b5b5-9c0de10cc5f3">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_235ff912-2deb-57f1-b09b-698fa020fda1"/>
+	<cim:IdentifiedObject.name>LILLEL61NANCY</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:Breaker rdf:ID="_20ca12bd-1331-5292-a0ca-9934726d46b4">
+	<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+	<cim:Switch.retained>true</cim:Switch.retained>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Breaker>
+<cim:CurveData rdf:ID="_2124f79e-aa41-5acf-8546-2cc0dd7765c8">
+	<cim:CurveData.xvalue>50</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-20</cim:CurveData.y1value>
+	<cim:CurveData.y2value>20</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_4635ff07-a907-5b8c-84eb-af08641e6385"/>
+</cim:CurveData>
+<cim:CurveData rdf:ID="_2172bc94-3fb7-5a9b-8e4d-d495176b8de8">
+	<cim:CurveData.xvalue>1000</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-300</cim:CurveData.y1value>
+	<cim:CurveData.y2value>300</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_775f612a-af08-5570-b4a2-7b296b72b783"/>
+</cim:CurveData>
+<cim:BusbarSection rdf:ID="_2254a366-c26d-5341-b943-2526edd7b24f">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>1B1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:CurrentLimit rdf:ID="_22a132c1-fda8-5aa8-bdc1-5cd51a8bf83d">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_e7e0f48f-8e3b-5e2f-b95b-fb228326342a"/>
+	<cim:IdentifiedObject.name>NANTEL71ZNANT</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:Terminal rdf:ID="_234d66cd-41eb-50f2-986f-7c262afa50a0">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_751c6e80-93da-56b3-a235-1a56cf3a36b6"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1A1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_235ff912-2deb-57f1-b09b-698fa020fda1">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_0a4d576e-257c-5f42-93ef-dacfd04a7a60"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL61NANCY</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChangerTablePoint rdf:ID="_23fb702a-7eb4-5ba7-a16b-db3426aa2b74">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>0.988832</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>11</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:DCConverterUnit rdf:ID="_25d3bbc4-de77-5f6b-8755-5b0c03b1f8fc">
+	<cim:DCConverterUnit.operationMode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#DCConverterOperatingModeKind.bipolar"/>
+	<cim:DCConverterUnit.Substation rdf:resource="#_1aa6b7f9-24d0-5569-83df-3872cecb2707"/>
+	<cim:IdentifiedObject.name>LILLEL91NANTE</cim:IdentifiedObject.name>
+</cim:DCConverterUnit>
+<cim:Terminal rdf:ID="_25e27045-984e-58fa-8d83-5d76aadb035e">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_0ed454d9-5cb4-5d6a-a52a-7c95fcb5f92a"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LYON1L31NANCY</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:ACLineSegment rdf:ID="_2716ee7b-7226-510d-aa63-79c766be05c0">
+	<cim:ACLineSegment.bch>2e-05</cim:ACLineSegment.bch>
+	<cim:ACLineSegment.gch>0</cim:ACLineSegment.gch>
+	<cim:ACLineSegment.r>10</cim:ACLineSegment.r>
+	<cim:ACLineSegment.x>10</cim:ACLineSegment.x>
+	<cim:ConductingEquipment.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:IdentifiedObject.name>LILLEL71STRAS</cim:IdentifiedObject.name>
+</cim:ACLineSegment>
+<cim:Breaker rdf:ID="_27429a27-5439-517c-bdbf-2d4bf335f45f">
+	<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+	<cim:Switch.retained>true</cim:Switch.retained>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Breaker>
+<cim:DCConverterUnit rdf:ID="_274dd1ba-4081-5f1a-9b8a-ad5bceaa0be8">
+	<cim:DCConverterUnit.operationMode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#DCConverterOperatingModeKind.bipolar"/>
+	<cim:DCConverterUnit.Substation rdf:resource="#_3f517f84-7e77-5156-b0c6-b18d1ebc9153"/>
+	<cim:IdentifiedObject.name>LILLEL91NANTE</cim:IdentifiedObject.name>
+</cim:DCConverterUnit>
+<cim:RatioTapChangerTable rdf:ID="_27945087-a838-5287-bb13-8a9e6b588201">
+	<cim:IdentifiedObject.name>NANCYY631</cim:IdentifiedObject.name>
+</cim:RatioTapChangerTable>
+<cim:OperationalLimitSet rdf:ID="_27c8b22b-31d4-5a63-b863-54d93f8d7166">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_46eccbc5-9d1c-56f4-90a3-92035f3c3ebb"/>
+	<cim:IdentifiedObject.name>LYON1L31NANCY</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:LoadResponseCharacteristic rdf:ID="_28b3ab97-c1e3-5ed0-8531-ac9543c89e1a">
+	<cim:LoadResponseCharacteristic.exponentModel>true</cim:LoadResponseCharacteristic.exponentModel>
+	<cim:LoadResponseCharacteristic.pVoltageExponent>0</cim:LoadResponseCharacteristic.pVoltageExponent>
+	<cim:LoadResponseCharacteristic.qVoltageExponent>0</cim:LoadResponseCharacteristic.qVoltageExponent>
+	<cim:IdentifiedObject.name>LOAD1</cim:IdentifiedObject.name>
+</cim:LoadResponseCharacteristic>
+<cim:PhaseTapChangerTablePoint rdf:ID="_28b7aea1-aa8e-5d7d-962c-5c433b1b7c64">
+	<cim:PhaseTapChangerTablePoint.angle>45</cim:PhaseTapChangerTablePoint.angle>
+	<cim:PhaseTapChangerTablePoint.PhaseTapChangerTable rdf:resource="#_3740a871-4c3d-5bf6-a925-946a5d75a394"/>
+	<cim:TapChangerTablePoint.b>0</cim:TapChangerTablePoint.b>
+	<cim:TapChangerTablePoint.g>0</cim:TapChangerTablePoint.g>
+	<cim:TapChangerTablePoint.r>0</cim:TapChangerTablePoint.r>
+	<cim:TapChangerTablePoint.ratio>1.11111</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>4</cim:TapChangerTablePoint.step>
+	<cim:TapChangerTablePoint.x>-99.759</cim:TapChangerTablePoint.x>
+</cim:PhaseTapChangerTablePoint>
+<cim:Terminal rdf:ID="_28deab1d-9bae-56c5-8e2d-179a440b1d83">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_74c9f601-340a-5529-8d8e-b9caae2fc3f5"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEP6</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChangerTablePoint rdf:ID="_2996b3e8-4b71-5485-beeb-1522032feecc">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>0.936536</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>6</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:WindGeneratingUnit rdf:ID="_2a3679e1-b7a8-5f59-a6ad-2d23f7f288c2">
+	<cim:WindGeneratingUnit.windGenUnitType rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#WindGenUnitKind.onshore"/>
+	<cim:GeneratingUnit.initialP>100</cim:GeneratingUnit.initialP>
+	<cim:GeneratingUnit.longPF>0</cim:GeneratingUnit.longPF>
+	<cim:GeneratingUnit.maxOperatingP>100</cim:GeneratingUnit.maxOperatingP>
+	<cim:GeneratingUnit.minOperatingP>10</cim:GeneratingUnit.minOperatingP>
+	<cim:GeneratingUnit.nominalP>100</cim:GeneratingUnit.nominalP>
+	<cim:GeneratingUnit.shortPF>0</cim:GeneratingUnit.shortPF>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4f1f6efc-0dc5-5219-9b8d-ff3f8f91a46d"/>
+	<cim:IdentifiedObject.name>WIND</cim:IdentifiedObject.name>
+</cim:WindGeneratingUnit>
+<cim:CurveData rdf:ID="_2c1e7285-b954-5217-ac44-648ce79e59da">
+	<cim:CurveData.xvalue>-1000</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-300</cim:CurveData.y1value>
+	<cim:CurveData.y2value>300</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_b0146faf-4a18-50b4-a8ac-b1ec6bfe8895"/>
+</cim:CurveData>
+<cim:ReactiveCapabilityCurve rdf:ID="_2c8682de-b7a1-59d7-b793-e767b8e6d035">
+	<cim:Curve.curveStyle rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#CurveStyle.straightLineYValues"/>
+	<cim:Curve.xUnit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.W"/>
+	<cim:Curve.y1Unit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.VAr"/>
+	<cim:Curve.y2Unit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.VAr"/>
+	<cim:IdentifiedObject.name>PHOTO</cim:IdentifiedObject.name>
+</cim:ReactiveCapabilityCurve>
+<cim:RegulatingControl rdf:ID="_2d29b93e-7c55-5a17-89bd-e671c4840877">
+	<cim:RegulatingControl.mode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#RegulatingControlModeKind.voltage"/>
+	<cim:RegulatingControl.Terminal rdf:resource="#_9b59bbe8-0ee4-5a3b-b743-720e7087d6a8"/>
+	<cim:IdentifiedObject.name>BATTE</cim:IdentifiedObject.name>
+</cim:RegulatingControl>
+<cim:Terminal rdf:ID="_2def1af9-5db8-5d8d-a21d-626f67a8a5bc">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_1482a39f-14cd-52ed-b4f4-07610006a259"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1B2</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_2fb7b1ae-d1be-59c6-a2cc-acb5d56573aa">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_742b82eb-243b-52d1-aaa2-d595c75b51d1"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1B2</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_2fcd91c0-4351-54e9-b337-1c3c723aecb1">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_187065dc-6a47-527a-8b87-7f3b651a8bcf"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>BORDEL61NANCY</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChangerTablePoint rdf:ID="_2fe2cb8b-a2fe-5925-8e11-a6a1eb28ab5d">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>0.956776</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>8</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:ConformLoad rdf:ID="_2ffc025d-31ef-5979-86c7-a9599831b30c">
+	<cim:ConformLoad.LoadGroup rdf:resource="#_84fe9e34-b242-5a96-8247-bf980b91c6d2"/>
+	<cim:EnergyConsumer.LoadResponse rdf:resource="#_189de51c-761b-5e8f-90a5-a8415243ddf7"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>LOAD2</cim:IdentifiedObject.name>
+</cim:ConformLoad>
+<cim:CurrentLimit rdf:ID="_301fb0eb-d317-5acd-af75-b922a4adf2bd">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_77ee2f30-7e7d-5544-9f95-fb551ee91320"/>
+	<cim:IdentifiedObject.name>LYON1L72PARIS</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:BusbarSection rdf:ID="_30f9a157-a19c-5c0c-ad2e-e4ab33cd8ffc">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>3A1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:PowerTransformer rdf:ID="_3142e555-b04d-5c2f-8bdc-7ddcfeb68bc7">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4a0865d1-808c-5c11-86f7-bafe9b1c32ca"/>
+	<cim:IdentifiedObject.name>NANCYY631</cim:IdentifiedObject.name>
+</cim:PowerTransformer>
+<cim:CurrentLimit rdf:ID="_32202f89-3bca-5c97-9533-00eb1aba1285">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_90e2c5ab-8f0f-50af-ac38-862c268ec39a"/>
+	<cim:IdentifiedObject.name>BORDEL61NANCY</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:ConformLoad rdf:ID="_32711cad-5c2f-5c04-a289-b2435895d203">
+	<cim:ConformLoad.LoadGroup rdf:resource="#_3944b9bb-569f-58ef-9801-6ca3c1ec1acc"/>
+	<cim:EnergyConsumer.LoadResponse rdf:resource="#_84c4d299-8da5-571e-8b20-c3933b0f7b1e"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_5e22acad-d30d-5cd6-a20f-ee7e34626f5b"/>
+	<cim:IdentifiedObject.name>LOAD3</cim:IdentifiedObject.name>
+</cim:ConformLoad>
+<cim:CurrentLimit rdf:ID="_32908bfd-9f62-58fb-8342-56ec42b2a016">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_7c0da5f3-caa8-5f7a-b0c7-1937f8555699"/>
+	<cim:IdentifiedObject.name>LYON1Y761</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:DCTerminal rdf:ID="_337e3067-e14b-598d-920e-f54ec26f7d8a">
+	<cim:DCTerminal.DCConductingEquipment rdf:resource="#_9ac6e845-5a91-56b2-b46c-8624bc8dc296"/>
+	<cim:DCBaseTerminal.DCNode rdf:resource="#_05ccb2ac-8b27-5095-aaca-a03e3ed4a836"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL91NANTE</cim:IdentifiedObject.name>
+</cim:DCTerminal>
+<cim:Terminal rdf:ID="_353335c1-08a0-5125-9fbe-8de972429c62">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_98602657-2c16-5410-9d09-caea8fef8db7"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1B1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:PhaseTapChangerTable rdf:ID="_3740a871-4c3d-5bf6-a925-946a5d75a394">
+	<cim:IdentifiedObject.name>NANCYY631</cim:IdentifiedObject.name>
+</cim:PhaseTapChangerTable>
+<cim:ConformLoadGroup rdf:ID="_3944b9bb-569f-58ef-9801-6ca3c1ec1acc">
+	<cim:IdentifiedObject.name>LOAD3</cim:IdentifiedObject.name>
+</cim:ConformLoadGroup>
+<cim:TapChangerControl rdf:ID="_3977cad7-f4f3-5420-a904-de5db5bc66cb">
+	<cim:RegulatingControl.mode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#RegulatingControlModeKind.voltage"/>
+	<cim:RegulatingControl.Terminal rdf:resource="#_a3e1547f-22b5-5998-90e3-7a14fed9be45"/>
+	<cim:IdentifiedObject.name>LYON1Y761</cim:IdentifiedObject.name>
+</cim:TapChangerControl>
+<cim:ConformLoad rdf:ID="_39d8e509-b456-5ebf-aa1e-8eae77f44df8">
+	<cim:ConformLoad.LoadGroup rdf:resource="#_67f6f53b-81b8-5444-bb18-92f07d6a10c0"/>
+	<cim:EnergyConsumer.LoadResponse rdf:resource="#_51a4a437-e510-5a8e-aed4-ac2c2be881bf"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_523a8aec-87c8-5fc5-a18e-78e4c88cc8ef"/>
+	<cim:IdentifiedObject.name>LOAD5</cim:IdentifiedObject.name>
+</cim:ConformLoad>
+<cim:RatioTapChangerTablePoint rdf:ID="_39ec280a-abf0-5778-92b8-216401c6631d">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>1.04731</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>16</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:RegulatingControl rdf:ID="_3ac19696-52c9-594c-bc1c-28d8095ec015">
+	<cim:RegulatingControl.mode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#RegulatingControlModeKind.voltage"/>
+	<cim:RegulatingControl.Terminal rdf:resource="#_fc77cde2-9174-5dd1-8e1b-a658acea6da4"/>
+	<cim:IdentifiedObject.name>TAG</cim:IdentifiedObject.name>
+</cim:RegulatingControl>
+<cim:VoltageLevel rdf:ID="_3b1414ac-eb55-54c7-915f-d3ba00c301be">
+	<cim:VoltageLevel.highVoltageLimit>420</cim:VoltageLevel.highVoltageLimit>
+	<cim:VoltageLevel.lowVoltageLimit>380</cim:VoltageLevel.lowVoltageLimit>
+	<cim:VoltageLevel.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:VoltageLevel.Substation rdf:resource="#_3f517f84-7e77-5156-b0c6-b18d1ebc9153"/>
+	<cim:IdentifiedObject.name>NANTEP7</cim:IdentifiedObject.name>
+</cim:VoltageLevel>
+<cim:CurveData rdf:ID="_3be1eeea-9d37-5d89-ad8e-194656621785">
+	<cim:CurveData.xvalue>-1000</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-300</cim:CurveData.y1value>
+	<cim:CurveData.y2value>300</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_775f612a-af08-5570-b4a2-7b296b72b783"/>
+</cim:CurveData>
+<cim:Substation rdf:ID="_3f517f84-7e77-5156-b0c6-b18d1ebc9153">
+	<cim:Substation.Region rdf:resource="#_17cf7116-571a-59aa-9988-dd181f33d9b1"/>
+	<cim:IdentifiedObject.name>NANTE</cim:IdentifiedObject.name>
+</cim:Substation>
+<cim:RatioTapChangerTablePoint rdf:ID="_3f8c6487-62a9-50ca-8439-2ffd6c9b7218">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>1.07269</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>18</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:LoadResponseCharacteristic rdf:ID="_3ffb9ec7-db03-5e89-8bc2-2a7d11248e5b">
+	<cim:LoadResponseCharacteristic.exponentModel>true</cim:LoadResponseCharacteristic.exponentModel>
+	<cim:LoadResponseCharacteristic.pVoltageExponent>0</cim:LoadResponseCharacteristic.pVoltageExponent>
+	<cim:LoadResponseCharacteristic.qVoltageExponent>0</cim:LoadResponseCharacteristic.qVoltageExponent>
+	<cim:IdentifiedObject.name>LOAD4</cim:IdentifiedObject.name>
+</cim:LoadResponseCharacteristic>
+<cim:RatioTapChangerTablePoint rdf:ID="_40728f89-68f4-518c-8e9b-99bb77b898e9">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>1.09933</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>20</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Terminal rdf:ID="_40b01889-67cc-50ce-9535-46a090f27eec">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_7ebfe0f6-d617-5b13-aa2f-ea9bafa603cb"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LYON1Y761</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_40bb8305-8d40-59aa-8f45-2ab304d0bb1c">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_0adece55-254b-5d1c-87f6-d443e1e8f4ec"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>PARISL71ZNANT</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChangerTablePoint rdf:ID="_4150d5d1-2f52-584e-bd0d-f4c5adfabd18">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>0.917135</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>4</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:BusbarSection rdf:ID="_420ac0e4-82a2-567a-adef-17239dc71712">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>3B1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:Terminal rdf:ID="_43c3c386-b7a7-5444-9451-132e7578eee6">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_f90afcc4-48e4-53a0-8c0f-6759e212e39f"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LYON1P6</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:CurrentLimit rdf:ID="_43cb3d8a-aa71-597d-b844-f80d6353d1a3">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_d2b45181-33e6-50ae-890d-5e97e3a588c9"/>
+	<cim:IdentifiedObject.name>LILLEL71LYON1</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:CurveData rdf:ID="_43ea51ce-6ec7-5096-bc2b-635b6e4237d6">
+	<cim:CurveData.xvalue>1000</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-300</cim:CurveData.y1value>
+	<cim:CurveData.y2value>300</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_51f9edfc-494a-59be-96bf-e249bad8f783"/>
+</cim:CurveData>
+<cim:ConformLoad rdf:ID="_44356fed-9f28-5a17-b3f4-14a478909670">
+	<cim:ConformLoad.LoadGroup rdf:resource="#_a39540b6-d22b-5515-9a9b-867683804d32"/>
+	<cim:EnergyConsumer.LoadResponse rdf:resource="#_7e3923d5-1509-59b2-9223-96a61e2b27d2"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_19ca914a-4524-51d1-81e8-840ec255ec2f"/>
+	<cim:IdentifiedObject.name>LOAD8</cim:IdentifiedObject.name>
+</cim:ConformLoad>
+<cim:Terminal rdf:ID="_44ce7c63-542d-54c4-92c5-238f92608666">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_8a925e03-1009-5537-88f0-c05501d102f5"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL71MARSE</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:CurrentLimit rdf:ID="_4575a36c-2ff4-5ac8-b0af-55835dce6849">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_9d2bae03-8edc-5e9e-9e8d-dd0a6acb2283"/>
+	<cim:IdentifiedObject.name>BORDEL61LILLE</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:RatioTapChangerTablePoint rdf:ID="_45883932-9e04-5d53-85e6-f58b6080e3ef">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>0.967228</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>9</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:ReactiveCapabilityCurve rdf:ID="_4635ff07-a907-5b8c-84eb-af08641e6385">
+	<cim:Curve.curveStyle rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#CurveStyle.straightLineYValues"/>
+	<cim:Curve.xUnit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.W"/>
+	<cim:Curve.y1Unit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.VAr"/>
+	<cim:Curve.y2Unit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.VAr"/>
+	<cim:IdentifiedObject.name>TAG</cim:IdentifiedObject.name>
+</cim:ReactiveCapabilityCurve>
+<cim:GeneratingUnit rdf:ID="_464a2ed7-e2ef-5339-b5f3-362884aeaddb">
+	<cim:GeneratingUnit.initialP>200</cim:GeneratingUnit.initialP>
+	<cim:GeneratingUnit.longPF>0.04</cim:GeneratingUnit.longPF>
+	<cim:GeneratingUnit.maxOperatingP>200</cim:GeneratingUnit.maxOperatingP>
+	<cim:GeneratingUnit.minOperatingP>10</cim:GeneratingUnit.minOperatingP>
+	<cim:GeneratingUnit.nominalP>200</cim:GeneratingUnit.nominalP>
+	<cim:GeneratingUnit.shortPF>0.04</cim:GeneratingUnit.shortPF>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_556234df-41d0-5ff2-99c9-6e39167bf549"/>
+	<cim:IdentifiedObject.name>PHOTO</cim:IdentifiedObject.name>
+</cim:GeneratingUnit>
+<cim:Terminal rdf:ID="_46939da1-2e4e-5372-aca6-ad5aeb0d9cb2">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_61f2b71c-e336-5675-abbe-5051890682c2"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>NUCL2</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_46b99270-d832-5473-abf5-bd1ac15f38c5">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_0a849f8c-3add-5cc9-9837-a9d2e513af6a"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:GeographicalRegion rdf:ID="_46e7220b-0e75-59db-9a7d-6dada29a78de">
+	<cim:IdentifiedObject.name>FR</cim:IdentifiedObject.name>
+</cim:GeographicalRegion>
+<cim:Terminal rdf:ID="_46eccbc5-9d1c-56f4-90a3-92035f3c3ebb">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_0ed454d9-5cb4-5d6a-a52a-7c95fcb5f92a"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LYON1L31NANCY</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_4731ec23-9243-59c1-96de-80b8ed6d243c">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_bb04d38f-86f4-5a8c-a110-5cc58ed591dc"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL91NANTE_Ex</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:OperationalLimitSet rdf:ID="_47a1a4a0-388f-5901-94c5-55c829361625">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_ba6f9055-a6fb-51e5-b87d-8db005a5fde0"/>
+	<cim:IdentifiedObject.name>BORDEL62LILLE</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:Terminal rdf:ID="_48b54ca4-e357-500b-aea8-135bde3b5ac7">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_30f9a157-a19c-5c0c-ad2e-e4ab33cd8ffc"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>3A1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChangerTablePoint rdf:ID="_48e8fad8-1649-523c-90be-0ce804f0baf1">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>0.946548</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>7</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:PowerTransformerEnd rdf:ID="_49114ca6-c32a-5e19-b632-ed94be10cdd9">
+	<cim:PowerTransformerEnd.b>0</cim:PowerTransformerEnd.b>
+	<cim:PowerTransformerEnd.connectionKind rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#WindingConnection.D"/>
+	<cim:PowerTransformerEnd.g>0</cim:PowerTransformerEnd.g>
+	<cim:PowerTransformerEnd.r>0</cim:PowerTransformerEnd.r>
+	<cim:PowerTransformerEnd.ratedS>600</cim:PowerTransformerEnd.ratedS>
+	<cim:PowerTransformerEnd.ratedU>225</cim:PowerTransformerEnd.ratedU>
+	<cim:PowerTransformerEnd.x>0</cim:PowerTransformerEnd.x>
+	<cim:PowerTransformerEnd.PowerTransformer rdf:resource="#_7ebfe0f6-d617-5b13-aa2f-ea9bafa603cb"/>
+	<cim:TransformerEnd.endNumber>2</cim:TransformerEnd.endNumber>
+	<cim:TransformerEnd.BaseVoltage rdf:resource="#_63893f24-5b4e-407c-9a1e-4ff71121f33c"/>
+	<cim:TransformerEnd.Terminal rdf:resource="#_40b01889-67cc-50ce-9535-46a090f27eec"/>
+	<cim:IdentifiedObject.name>LYON1Y761</cim:IdentifiedObject.name>
+</cim:PowerTransformerEnd>
+<cim:Terminal rdf:ID="_49118566-eb3d-52bd-8a80-a915528292e7">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_c94a1fa9-2166-5d79-9a75-35c7f0bd9ca6"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LYON1L71PARIS</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChangerTablePoint rdf:ID="_4964f531-a6da-5451-aa3b-6f85b00b42d7">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>1.18781</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>26</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:CurveData rdf:ID="_4966bfef-6e05-5958-8ab4-6cc635f9c186">
+	<cim:CurveData.xvalue>0</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-50</cim:CurveData.y1value>
+	<cim:CurveData.y2value>50</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_6d09f645-223d-5c02-bd76-6f4c054536cf"/>
+</cim:CurveData>
+<cim:DCTerminal rdf:ID="_49bfbabb-4e2d-584b-a341-a43a1169437d">
+	<cim:DCTerminal.DCConductingEquipment rdf:resource="#_e98920a4-e297-525d-808c-fbae4fb9a588"/>
+	<cim:DCBaseTerminal.DCNode rdf:resource="#_9f841d34-407f-58b7-9297-536c2a38aa0c"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL91NANTE</cim:IdentifiedObject.name>
+</cim:DCTerminal>
+<cim:Substation rdf:ID="_4a0865d1-808c-5c11-86f7-bafe9b1c32ca">
+	<cim:Substation.Region rdf:resource="#_17cf7116-571a-59aa-9988-dd181f33d9b1"/>
+	<cim:IdentifiedObject.name>NANCY</cim:IdentifiedObject.name>
+</cim:Substation>
+<cim:Terminal rdf:ID="_4ab42429-c06f-5275-bacd-b6be028a2e22">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_c9a51a7b-797b-5f99-a44d-bb2780145135"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LOAD6</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:VoltageLevel rdf:ID="_4c88a44b-26ac-5a65-8d0a-426b14e1a608">
+	<cim:VoltageLevel.highVoltageLimit>420</cim:VoltageLevel.highVoltageLimit>
+	<cim:VoltageLevel.lowVoltageLimit>380</cim:VoltageLevel.lowVoltageLimit>
+	<cim:VoltageLevel.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:VoltageLevel.Substation rdf:resource="#_1aa6b7f9-24d0-5569-83df-3872cecb2707"/>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:VoltageLevel>
+<cim:Terminal rdf:ID="_4d465199-80ec-5141-a71f-875fd082d36c">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_0bbefa61-cd19-533a-bb08-a7c2185e4724"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL71LYON1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:ConformLoadGroup rdf:ID="_4d79472a-8754-5d2c-a5ee-ae61fe576394">
+	<cim:IdentifiedObject.name>LOAD7</cim:IdentifiedObject.name>
+</cim:ConformLoadGroup>
+<cim:VoltageLevel rdf:ID="_4dd9513d-c4ad-57ef-b673-1b0c606868d6">
+	<cim:VoltageLevel.highVoltageLimit>245</cim:VoltageLevel.highVoltageLimit>
+	<cim:VoltageLevel.lowVoltageLimit>200</cim:VoltageLevel.lowVoltageLimit>
+	<cim:VoltageLevel.BaseVoltage rdf:resource="#_63893f24-5b4e-407c-9a1e-4ff71121f33c"/>
+	<cim:VoltageLevel.Substation rdf:resource="#_d4720eb5-86a6-5ab8-86bb-cfbb8b4f8cf9"/>
+	<cim:IdentifiedObject.name>BORDEP6</cim:IdentifiedObject.name>
+</cim:VoltageLevel>
+<cim:Terminal rdf:ID="_4ea35251-f8b9-564e-9c27-d7b0a5a6c627">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_1f869fd8-edbe-581d-a04c-dfdbd8a6a754"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL61LYON1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:BusbarSection rdf:ID="_4eba93fe-da96-53cf-aa64-d17bb9264e35">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>2B1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:Substation rdf:ID="_4f1f6efc-0dc5-5219-9b8d-ff3f8f91a46d">
+	<cim:Substation.Region rdf:resource="#_17cf7116-571a-59aa-9988-dd181f33d9b1"/>
+	<cim:IdentifiedObject.name>LYON1</cim:IdentifiedObject.name>
+</cim:Substation>
+<cim:Terminal rdf:ID="_4f4cf68d-5008-5c47-a876-01743df8b844">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_50799a2d-58c5-50d3-af19-829a7e8c91c7"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>BORDEL62LILLE</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_4f84cdc6-b9fb-59f2-86d8-968b3705c1bb">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_f094c5b5-6325-5db6-86ea-7a9ca23c2129"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1.2</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:PowerTransformer rdf:ID="_4fa294ee-b5ed-5319-a248-c5a8d1be7366">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_cc6a0cc4-4bb3-5bfc-a8b4-31c5249c1e20"/>
+	<cim:IdentifiedObject.name>LYON1Y631</cim:IdentifiedObject.name>
+</cim:PowerTransformer>
+<cim:ACLineSegment rdf:ID="_50799a2d-58c5-50d3-af19-829a7e8c91c7">
+	<cim:ACLineSegment.bch>0.0004</cim:ACLineSegment.bch>
+	<cim:ACLineSegment.gch>0</cim:ACLineSegment.gch>
+	<cim:ACLineSegment.r>3</cim:ACLineSegment.r>
+	<cim:ACLineSegment.x>30</cim:ACLineSegment.x>
+	<cim:ConductingEquipment.BaseVoltage rdf:resource="#_63893f24-5b4e-407c-9a1e-4ff71121f33c"/>
+	<cim:IdentifiedObject.name>BORDEL62LILLE</cim:IdentifiedObject.name>
+</cim:ACLineSegment>
+<cim:RatioTapChangerTablePoint rdf:ID="_50bc3d87-ab9c-5f3f-9590-4d7c6adbbacb">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>1.14186</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>23</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:LinearShuntCompensator rdf:ID="_50bf5cb9-0cdd-55ed-975b-25228dcab51e">
+	<cim:LinearShuntCompensator.bPerSection>-0.000197531</cim:LinearShuntCompensator.bPerSection>
+	<cim:LinearShuntCompensator.gPerSection>0</cim:LinearShuntCompensator.gPerSection>
+	<cim:ShuntCompensator.maximumSections>1</cim:ShuntCompensator.maximumSections>
+	<cim:ShuntCompensator.nomU>225</cim:ShuntCompensator.nomU>
+	<cim:ShuntCompensator.normalSections>0</cim:ShuntCompensator.normalSections>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_c7a3ae76-fb12-5572-9a0c-d63feb579ace"/>
+	<cim:IdentifiedObject.name>REACT1</cim:IdentifiedObject.name>
+</cim:LinearShuntCompensator>
+<cim:RatioTapChangerTablePoint rdf:ID="_50d5b259-e88e-562f-b51c-2c0f368ec344">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>0.907732</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>3</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:RatioTapChangerTablePoint rdf:ID="_51850a2e-a97e-5e46-a61c-13bd315c5c91">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>1.18781</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>26</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:LoadResponseCharacteristic rdf:ID="_51a4a437-e510-5a8e-aed4-ac2c2be881bf">
+	<cim:LoadResponseCharacteristic.exponentModel>true</cim:LoadResponseCharacteristic.exponentModel>
+	<cim:LoadResponseCharacteristic.pVoltageExponent>0</cim:LoadResponseCharacteristic.pVoltageExponent>
+	<cim:LoadResponseCharacteristic.qVoltageExponent>0</cim:LoadResponseCharacteristic.qVoltageExponent>
+	<cim:IdentifiedObject.name>LOAD5</cim:IdentifiedObject.name>
+</cim:LoadResponseCharacteristic>
+<cim:RatioTapChangerTablePoint rdf:ID="_51e63524-22d9-57de-82d7-4e9ddb95e068">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>1.17209</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>25</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:VsCapabilityCurve rdf:ID="_51f9edfc-494a-59be-96bf-e249bad8f783">
+	<cim:Curve.curveStyle rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#CurveStyle.straightLineYValues"/>
+	<cim:Curve.xUnit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.W"/>
+	<cim:Curve.y1Unit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.VAr"/>
+	<cim:Curve.y2Unit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.VAr"/>
+	<cim:IdentifiedObject.name></cim:IdentifiedObject.name>
+</cim:VsCapabilityCurve>
+<cim:Terminal rdf:ID="_520e1b52-7134-5335-9ef6-71f4d131422d">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_a28e0534-0d26-56db-b5fc-8f0d696abc38"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1B1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:OperationalLimitSet rdf:ID="_521ac9ce-751d-569e-9327-a2bc1a07734b">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_49118566-eb3d-52bd-8a80-a915528292e7"/>
+	<cim:IdentifiedObject.name>LYON1L71PARIS</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:VoltageLevel rdf:ID="_523a8aec-87c8-5fc5-a18e-78e4c88cc8ef">
+	<cim:VoltageLevel.highVoltageLimit>245</cim:VoltageLevel.highVoltageLimit>
+	<cim:VoltageLevel.lowVoltageLimit>200</cim:VoltageLevel.lowVoltageLimit>
+	<cim:VoltageLevel.BaseVoltage rdf:resource="#_63893f24-5b4e-407c-9a1e-4ff71121f33c"/>
+	<cim:VoltageLevel.Substation rdf:resource="#_556234df-41d0-5ff2-99c9-6e39167bf549"/>
+	<cim:IdentifiedObject.name>LILLEP6</cim:IdentifiedObject.name>
+</cim:VoltageLevel>
+<cim:RatioTapChangerTablePoint rdf:ID="_539456d8-d65e-588d-a54e-0b480a13ac96">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>0.967228</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>9</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:BusbarSection rdf:ID="_54449b49-b28c-53c7-81b0-0efa7084d53d">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_764af332-5143-5fb5-8846-1ff78bade090"/>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:RatioTapChangerTablePoint rdf:ID="_5553e65f-f707-5287-893e-d3cd4c188f8d">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>0.97791</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>10</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Substation rdf:ID="_556234df-41d0-5ff2-99c9-6e39167bf549">
+	<cim:Substation.Region rdf:resource="#_17cf7116-571a-59aa-9988-dd181f33d9b1"/>
+	<cim:IdentifiedObject.name>LILLE</cim:IdentifiedObject.name>
+</cim:Substation>
+<cim:BusbarSection rdf:ID="_56886347-b7f5-5039-81d0-726210468d11">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_0fcb398e-723d-54ec-ab4d-07d266504d31"/>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:RatioTapChangerTablePoint rdf:ID="_5691e24d-d444-55a6-b26d-18946e8860b1">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>1.12732</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>22</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:VsConverter rdf:ID="_56eb655a-be28-5a8a-9054-5f538424654f">
+	<cim:VsConverter.CapabilityCurve rdf:resource="#_b0146faf-4a18-50b4-a8ac-b1ec6bfe8895"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_25d3bbc4-de77-5f6b-8755-5b0c03b1f8fc"/>
+	<cim:IdentifiedObject.name>LILLEL91NANTE_Or</cim:IdentifiedObject.name>
+</cim:VsConverter>
+<cim:BusbarSection rdf:ID="_57bd0fab-c3e0-5974-a3cc-7849179ea712">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_6ff56642-53eb-56e7-a867-43972fd61d92"/>
+	<cim:IdentifiedObject.name>2.1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:RatioTapChangerTablePoint rdf:ID="_58577e3e-c1c2-57bf-bb1e-8bcc9595ccc4">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>1.15677</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>24</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:RatioTapChangerTablePoint rdf:ID="_58a08448-26fc-5a91-a073-8cfd0d0d1409">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_5c134967-ff99-560b-97b8-cbfeee4b073e"/>
+	<cim:TapChangerTablePoint.ratio>1</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>2</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:RatioTapChangerTablePoint rdf:ID="_59afe269-ae5a-5892-bd46-0279bc1cb261">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>0.936536</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>6</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:RatioTapChangerTable rdf:ID="_5c134967-ff99-560b-97b8-cbfeee4b073e">
+	<cim:IdentifiedObject.name>LYON1Y761</cim:IdentifiedObject.name>
+</cim:RatioTapChangerTable>
+<cim:CurrentLimit rdf:ID="_5c590968-8082-56a0-ba91-4f48f21c9a17">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_786d58c4-10ed-567b-9bda-d76c720d7e42"/>
+	<cim:IdentifiedObject.name>NANCYY631</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:BusbarSection rdf:ID="_5c8c0422-3630-5950-b555-8cdd978dac48">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>3B2</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:VoltageLevel rdf:ID="_5e22acad-d30d-5cd6-a20f-ee7e34626f5b">
+	<cim:VoltageLevel.highVoltageLimit>420</cim:VoltageLevel.highVoltageLimit>
+	<cim:VoltageLevel.lowVoltageLimit>380</cim:VoltageLevel.lowVoltageLimit>
+	<cim:VoltageLevel.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:VoltageLevel.Substation rdf:resource="#_e2333714-7fd2-59e0-89a9-65ed5695bec0"/>
+	<cim:IdentifiedObject.name>MARSEP7</cim:IdentifiedObject.name>
+</cim:VoltageLevel>
+<cim:ACDCConverterDCTerminal rdf:ID="_5f21d2af-e854-587e-9780-1353c58b2f78">
+	<cim:ACDCConverterDCTerminal.DCConductingEquipment rdf:resource="#_0dfaea66-aa19-5acd-944f-35d3c44b418d"/>
+	<cim:DCBaseTerminal.DCNode rdf:resource="#_05ccb2ac-8b27-5095-aaca-a03e3ed4a836"/>
+	<cim:IdentifiedObject.name>LILLEL91NANTE</cim:IdentifiedObject.name>
+</cim:ACDCConverterDCTerminal>
+<cim:Terminal rdf:ID="_5f268ed7-bbf5-5214-a3ef-a8eaef28c295">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_57bd0fab-c3e0-5974-a3cc-7849179ea712"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>2.1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:SynchronousMachine rdf:ID="_61f2b71c-e336-5675-abbe-5051890682c2">
+	<cim:SynchronousMachine.maxQ>9999</cim:SynchronousMachine.maxQ>
+	<cim:SynchronousMachine.minQ>-9998</cim:SynchronousMachine.minQ>
+	<cim:SynchronousMachine.type rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#SynchronousMachineKind.generator"/>
+	<cim:RotatingMachine.ratedS>10110.9</cim:RotatingMachine.ratedS>
+	<cim:RotatingMachine.GeneratingUnit rdf:resource="#_09bad6ec-3640-5631-aee8-7f9d162217cd"/>
+	<cim:RegulatingCondEq.RegulatingControl rdf:resource="#_9ff87c77-42c1-5268-bd25-042dbd9224ba"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>NUCL2</cim:IdentifiedObject.name>
+</cim:SynchronousMachine>
+<cim:ConformLoad rdf:ID="_6323101b-b6e8-5d2c-8e2a-767d3731a796">
+	<cim:ConformLoad.LoadGroup rdf:resource="#_7d0f817e-40b0-561b-a250-77a95df1f164"/>
+	<cim:EnergyConsumer.LoadResponse rdf:resource="#_3ffb9ec7-db03-5e89-8bc2-2a7d11248e5b"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_c7a3ae76-fb12-5572-9a0c-d63feb579ace"/>
+	<cim:IdentifiedObject.name>LOAD4</cim:IdentifiedObject.name>
+</cim:ConformLoad>
+<cim:Terminal rdf:ID="_6323fdf3-4f42-56f1-a9e2-e849f1070c68">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_8e134d04-b50c-5897-92ad-4de091ac7b96"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:PowerTransformer rdf:ID="_6508ff71-60a4-52b9-aa5c-11abe867cfa1">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_1aa6b7f9-24d0-5569-83df-3872cecb2707"/>
+	<cim:IdentifiedObject.name>LILLEY761</cim:IdentifiedObject.name>
+</cim:PowerTransformer>
+<cim:Terminal rdf:ID="_65157689-f616-5739-b693-a2fd1941e035">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_50bf5cb9-0cdd-55ed-975b-25228dcab51e"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>REACT1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChangerTablePoint rdf:ID="_65551414-17ca-5c72-9534-85ac512abfc9">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>1.15677</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>24</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:RatioTapChangerTablePoint rdf:ID="_66a7a564-f4df-5b2f-b525-df385de66df8">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_d0f9ee26-f8ca-5f67-8a62-77edbd5b6922"/>
+	<cim:TapChangerTablePoint.ratio>0.909091</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>1</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:ConformLoadGroup rdf:ID="_67f6f53b-81b8-5444-bb18-92f07d6a10c0">
+	<cim:IdentifiedObject.name>LOAD5</cim:IdentifiedObject.name>
+</cim:ConformLoadGroup>
+<cim:Terminal rdf:ID="_6a2d470d-858c-5b54-8698-4ed8674667a7">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_3142e555-b04d-5c2f-8bdc-7ddcfeb68bc7"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>NANCYY631</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:CurrentLimit rdf:ID="_6adaa706-5a31-5811-83b4-fcdc9d9c7b66">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_d586897e-248f-529e-927d-6a6d6ab381a5"/>
+	<cim:IdentifiedObject.name>MARSEL71ZNANT</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:VoltageLevel rdf:ID="_6c1f4114-9e81-55c5-91ee-72deedd55d86">
+	<cim:VoltageLevel.highVoltageLimit>420</cim:VoltageLevel.highVoltageLimit>
+	<cim:VoltageLevel.lowVoltageLimit>380</cim:VoltageLevel.lowVoltageLimit>
+	<cim:VoltageLevel.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:VoltageLevel.Substation rdf:resource="#_7c919377-698a-5c91-8f67-959dfc6303c5"/>
+	<cim:IdentifiedObject.name>LYON1P7</cim:IdentifiedObject.name>
+</cim:VoltageLevel>
+<cim:ReactiveCapabilityCurve rdf:ID="_6d09f645-223d-5c02-bd76-6f4c054536cf">
+	<cim:Curve.curveStyle rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#CurveStyle.straightLineYValues"/>
+	<cim:Curve.xUnit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.W"/>
+	<cim:Curve.y1Unit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.VAr"/>
+	<cim:Curve.y2Unit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.VAr"/>
+	<cim:IdentifiedObject.name>BATTE</cim:IdentifiedObject.name>
+</cim:ReactiveCapabilityCurve>
+<cim:OperationalLimitSet rdf:ID="_6f6ce867-3279-53bd-86e7-11a6d82195bf">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_a08458d0-398b-5735-98a7-a22445f090ae"/>
+	<cim:IdentifiedObject.name>LILLEY761</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:VoltageLevel rdf:ID="_6ff56642-53eb-56e7-a867-43972fd61d92">
+	<cim:VoltageLevel.highVoltageLimit>245</cim:VoltageLevel.highVoltageLimit>
+	<cim:VoltageLevel.lowVoltageLimit>200</cim:VoltageLevel.lowVoltageLimit>
+	<cim:VoltageLevel.BaseVoltage rdf:resource="#_63893f24-5b4e-407c-9a1e-4ff71121f33c"/>
+	<cim:VoltageLevel.Substation rdf:resource="#_4a0865d1-808c-5c11-86f7-bafe9b1c32ca"/>
+	<cim:IdentifiedObject.name>NANCYP6</cim:IdentifiedObject.name>
+</cim:VoltageLevel>
+<cim:ACLineSegment rdf:ID="_70a1a883-4c2d-5324-ad49-8da62e771af7">
+	<cim:ACLineSegment.bch>0.00012</cim:ACLineSegment.bch>
+	<cim:ACLineSegment.gch>0</cim:ACLineSegment.gch>
+	<cim:ACLineSegment.r>0.9</cim:ACLineSegment.r>
+	<cim:ACLineSegment.x>9</cim:ACLineSegment.x>
+	<cim:ConductingEquipment.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:IdentifiedObject.name>MARSEL71ZNANT</cim:IdentifiedObject.name>
+</cim:ACLineSegment>
+<cim:Terminal rdf:ID="_72eec2ea-3538-53d9-8446-58c5a3b8ca86">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_2716ee7b-7226-510d-aa63-79c766be05c0"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL71STRAS</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_737ff568-87eb-5fc1-9c56-1270f2e5b2dc">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_0adece55-254b-5d1c-87f6-d443e1e8f4ec"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>PARISL71ZNANT</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:CurveData rdf:ID="_73ab4e29-32ec-503c-9ae5-2e1bc3cfc67e">
+	<cim:CurveData.xvalue>0</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-600</cim:CurveData.y1value>
+	<cim:CurveData.y2value>400</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_775f612a-af08-5570-b4a2-7b296b72b783"/>
+</cim:CurveData>
+<cim:ConformLoadGroup rdf:ID="_7404a7e0-29bd-5d9b-86e2-989535a74746">
+	<cim:IdentifiedObject.name>LOAD6</cim:IdentifiedObject.name>
+</cim:ConformLoadGroup>
+<cim:RatioTapChangerTablePoint rdf:ID="_74176c03-2011-5958-98f2-c75369560879">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>1.07269</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>18</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:BusbarSection rdf:ID="_742b82eb-243b-52d1-aaa2-d595c75b51d1">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>1B2</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:SynchronousMachine rdf:ID="_746dd38f-d761-52ac-8064-19a69d98c582">
+	<cim:SynchronousMachine.maxQ>9999</cim:SynchronousMachine.maxQ>
+	<cim:SynchronousMachine.minQ>-9998</cim:SynchronousMachine.minQ>
+	<cim:SynchronousMachine.type rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#SynchronousMachineKind.generator"/>
+	<cim:RotatingMachine.ratedS>10110.9</cim:RotatingMachine.ratedS>
+	<cim:RotatingMachine.GeneratingUnit rdf:resource="#_d593469f-c86f-5686-85a3-521dccd9adc7"/>
+	<cim:RegulatingCondEq.RegulatingControl rdf:resource="#_f77eb14e-c740-591b-8bce-6dc1b991c1de"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_764af332-5143-5fb5-8846-1ff78bade090"/>
+	<cim:IdentifiedObject.name>NUCL1</cim:IdentifiedObject.name>
+</cim:SynchronousMachine>
+<cim:ConformLoad rdf:ID="_747f013f-e9e7-501c-9b2d-2d392945a24e">
+	<cim:ConformLoad.LoadGroup rdf:resource="#_cac68e9f-5c1a-561f-b69d-ed3288017360"/>
+	<cim:EnergyConsumer.LoadResponse rdf:resource="#_28b3ab97-c1e3-5ed0-8531-ac9543c89e1a"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_6c1f4114-9e81-55c5-91ee-72deedd55d86"/>
+	<cim:IdentifiedObject.name>LOAD1</cim:IdentifiedObject.name>
+</cim:ConformLoad>
+<cim:RatioTapChangerTablePoint rdf:ID="_74845e68-134f-5487-9023-f2e83acb2622">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>0.988832</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>11</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Breaker rdf:ID="_74c9f601-340a-5529-8d8e-b9caae2fc3f5">
+	<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+	<cim:Switch.retained>true</cim:Switch.retained>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_523a8aec-87c8-5fc5-a18e-78e4c88cc8ef"/>
+	<cim:IdentifiedObject.name>LILLEP6</cim:IdentifiedObject.name>
+</cim:Breaker>
+<cim:Terminal rdf:ID="_74d486ec-801d-5d5b-b8de-15632443643b">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_d0c978c7-0380-55b6-823b-6db7768f25b6"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RegulatingControl rdf:ID="_75189d84-df38-54c7-9fa5-77a6cfcea6a6">
+	<cim:RegulatingControl.mode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#RegulatingControlModeKind.voltage"/>
+	<cim:RegulatingControl.Terminal rdf:resource="#_0d2efaaa-4d67-5c0a-9ee8-b91c67d629cd"/>
+	<cim:IdentifiedObject.name>WIND</cim:IdentifiedObject.name>
+</cim:RegulatingControl>
+<cim:BusbarSection rdf:ID="_751c6e80-93da-56b3-a235-1a56cf3a36b6">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_6c1f4114-9e81-55c5-91ee-72deedd55d86"/>
+	<cim:IdentifiedObject.name>1A1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:VoltageLevel rdf:ID="_7559d352-e87f-5937-8889-a2fd830feb6a">
+	<cim:VoltageLevel.highVoltageLimit>420</cim:VoltageLevel.highVoltageLimit>
+	<cim:VoltageLevel.lowVoltageLimit>380</cim:VoltageLevel.lowVoltageLimit>
+	<cim:VoltageLevel.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:VoltageLevel.Substation rdf:resource="#_ad5294f0-65be-5d4e-8652-ea6c26fe3a97"/>
+	<cim:IdentifiedObject.name>STRASP7</cim:IdentifiedObject.name>
+</cim:VoltageLevel>
+<cim:Terminal rdf:ID="_75d5f114-87ca-5204-8654-6896f6c7395b">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_fd0a7b08-0f21-5ce2-bc07-4a121a7b8821"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>NANCYP6</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RegulatingControl rdf:ID="_75f4ab76-2e2b-5f4d-a2c8-dd2f551d0d4a">
+	<cim:RegulatingControl.mode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#RegulatingControlModeKind.voltage"/>
+	<cim:RegulatingControl.Terminal rdf:resource="#_df7e4b13-8cc4-5f3d-9c30-e09c17638295"/>
+	<cim:IdentifiedObject.name>SVC1</cim:IdentifiedObject.name>
+</cim:RegulatingControl>
+<cim:VoltageLevel rdf:ID="_764af332-5143-5fb5-8846-1ff78bade090">
+	<cim:VoltageLevel.highVoltageLimit>420</cim:VoltageLevel.highVoltageLimit>
+	<cim:VoltageLevel.lowVoltageLimit>380</cim:VoltageLevel.lowVoltageLimit>
+	<cim:VoltageLevel.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:VoltageLevel.Substation rdf:resource="#_f69384a4-3577-5373-ab3c-f438982c860b"/>
+	<cim:IdentifiedObject.name>PARISP7</cim:IdentifiedObject.name>
+</cim:VoltageLevel>
+<cim:RatioTapChangerTablePoint rdf:ID="_76ef62b2-8076-5641-89f2-db8b4bf00595">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>1.09933</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>20</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:VsCapabilityCurve rdf:ID="_775f612a-af08-5570-b4a2-7b296b72b783">
+	<cim:Curve.curveStyle rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#CurveStyle.straightLineYValues"/>
+	<cim:Curve.xUnit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.W"/>
+	<cim:Curve.y1Unit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.VAr"/>
+	<cim:Curve.y2Unit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.VAr"/>
+	<cim:IdentifiedObject.name></cim:IdentifiedObject.name>
+</cim:VsCapabilityCurve>
+<cim:Terminal rdf:ID="_77d34bbe-c935-56ed-ad72-b2fd5bf97905">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_d79f7773-5b75-51fc-a527-80be8a278c9d"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>BORDEL61LILLE</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:OperationalLimitSet rdf:ID="_77ee2f30-7e7d-5544-9f95-fb551ee91320">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_dc3f38d7-e35e-5355-8d24-74b13aebd63b"/>
+	<cim:IdentifiedObject.name>LYON1L72PARIS</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:Terminal rdf:ID="_781c9476-cad1-56e0-b43d-049bcd474f4a">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_bb139321-74a4-582a-9964-a65d317e00ff"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL91NANTE_Ex</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:OperationalLimitSet rdf:ID="_786d58c4-10ed-567b-9bda-d76c720d7e42">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_834c4540-4083-590a-96b9-fe599e1d039c"/>
+	<cim:IdentifiedObject.name>NANCYY631</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:Terminal rdf:ID="_787b4dc3-79ba-5d35-8891-3e3549fc8ea5">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_7dda5716-0b9c-5abe-afb8-58b5d27863ab"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>HYDRO</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_78c377aa-ff97-5ab4-99b1-53c8411a1c46">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_0a4d576e-257c-5f42-93ef-dacfd04a7a60"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL61NANCY</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:ControlArea rdf:ID="_7917d422-d956-5595-9489-5ad54aeae656">
+	<cim:ControlArea.type rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#ControlAreaTypeKind.Interchange"/>
+	<entsoe:IdentifiedObject.energyIdentCodeEic>10YFR-RTE------C</entsoe:IdentifiedObject.energyIdentCodeEic>
+	<cim:IdentifiedObject.name>FR</cim:IdentifiedObject.name>
+</cim:ControlArea>
+<cim:Terminal rdf:ID="_7a22f842-c990-523d-9481-cfe3554471de">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_94215121-bdf5-529a-9bb5-bfced4555b2a"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:PhaseTapChangerTablePoint rdf:ID="_7a5c7e11-208c-502a-ba73-6ffe28864b46">
+	<cim:PhaseTapChangerTablePoint.angle>90</cim:PhaseTapChangerTablePoint.angle>
+	<cim:PhaseTapChangerTablePoint.PhaseTapChangerTable rdf:resource="#_3740a871-4c3d-5bf6-a925-946a5d75a394"/>
+	<cim:TapChangerTablePoint.b>0</cim:TapChangerTablePoint.b>
+	<cim:TapChangerTablePoint.g>0</cim:TapChangerTablePoint.g>
+	<cim:TapChangerTablePoint.r>0</cim:TapChangerTablePoint.r>
+	<cim:TapChangerTablePoint.ratio>1.25</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>5</cim:TapChangerTablePoint.step>
+	<cim:TapChangerTablePoint.x>-99.8795</cim:TapChangerTablePoint.x>
+</cim:PhaseTapChangerTablePoint>
+<cim:Terminal rdf:ID="_7b2cef14-51c5-5ea5-adf8-3432dd442ddb">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_1a9bac94-25da-515e-8f4d-39d30b7ae16b"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1A1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:OperationalLimitSet rdf:ID="_7c0da5f3-caa8-5f7a-b0c7-1937f8555699">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_40b01889-67cc-50ce-9535-46a090f27eec"/>
+	<cim:IdentifiedObject.name>LYON1Y761</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:Substation rdf:ID="_7c919377-698a-5c91-8f67-959dfc6303c5">
+	<cim:Substation.Region rdf:resource="#_17cf7116-571a-59aa-9988-dd181f33d9b1"/>
+	<cim:IdentifiedObject.name>LYON1</cim:IdentifiedObject.name>
+</cim:Substation>
+<cim:ConformLoadGroup rdf:ID="_7d0f817e-40b0-561b-a250-77a95df1f164">
+	<cim:IdentifiedObject.name>LOAD4</cim:IdentifiedObject.name>
+</cim:ConformLoadGroup>
+<cim:SynchronousMachine rdf:ID="_7dda5716-0b9c-5abe-afb8-58b5d27863ab">
+	<cim:SynchronousMachine.maxQ>9999</cim:SynchronousMachine.maxQ>
+	<cim:SynchronousMachine.minQ>-9998</cim:SynchronousMachine.minQ>
+	<cim:SynchronousMachine.type rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#SynchronousMachineKind.generator"/>
+	<cim:RotatingMachine.ratedS>10011.5</cim:RotatingMachine.ratedS>
+	<cim:RotatingMachine.GeneratingUnit rdf:resource="#_9ccba59b-f281-5928-a74b-a58d6ab4c798"/>
+	<cim:RegulatingCondEq.RegulatingControl rdf:resource="#_83cad723-8969-5cf7-8e23-e29aa197ac83"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_6ff56642-53eb-56e7-a867-43972fd61d92"/>
+	<cim:IdentifiedObject.name>HYDRO</cim:IdentifiedObject.name>
+</cim:SynchronousMachine>
+<cim:LoadResponseCharacteristic rdf:ID="_7e3923d5-1509-59b2-9223-96a61e2b27d2">
+	<cim:LoadResponseCharacteristic.exponentModel>true</cim:LoadResponseCharacteristic.exponentModel>
+	<cim:LoadResponseCharacteristic.pVoltageExponent>0</cim:LoadResponseCharacteristic.pVoltageExponent>
+	<cim:LoadResponseCharacteristic.qVoltageExponent>0</cim:LoadResponseCharacteristic.qVoltageExponent>
+	<cim:IdentifiedObject.name>LOAD8</cim:IdentifiedObject.name>
+</cim:LoadResponseCharacteristic>
+<cim:PowerTransformer rdf:ID="_7ebfe0f6-d617-5b13-aa2f-ea9bafa603cb">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_7c919377-698a-5c91-8f67-959dfc6303c5"/>
+	<cim:IdentifiedObject.name>LYON1Y761</cim:IdentifiedObject.name>
+</cim:PowerTransformer>
+<cim:RatioTapChangerTablePoint rdf:ID="_7f517483-eeca-51b1-95d9-6d401b262721">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>1.20396</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>27</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Terminal rdf:ID="_7f91b28a-3433-5033-9544-1ac15a9ecddf">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_32711cad-5c2f-5c04-a289-b2435895d203"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LOAD3</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_8015d026-5d10-57ab-9d14-7d94e8128f7e">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_2254a366-c26d-5341-b943-2526edd7b24f"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1B1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_834c4540-4083-590a-96b9-fe599e1d039c">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_3142e555-b04d-5c2f-8bdc-7ddcfeb68bc7"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>NANCYY631</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RegulatingControl rdf:ID="_83cad723-8969-5cf7-8e23-e29aa197ac83">
+	<cim:RegulatingControl.mode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#RegulatingControlModeKind.voltage"/>
+	<cim:RegulatingControl.Terminal rdf:resource="#_f58c2c43-3ffe-5176-bead-2597c86b1321"/>
+	<cim:IdentifiedObject.name>RDC1</cim:IdentifiedObject.name>
+</cim:RegulatingControl>
+<cim:LoadResponseCharacteristic rdf:ID="_84c4d299-8da5-571e-8b20-c3933b0f7b1e">
+	<cim:LoadResponseCharacteristic.exponentModel>true</cim:LoadResponseCharacteristic.exponentModel>
+	<cim:LoadResponseCharacteristic.pVoltageExponent>0</cim:LoadResponseCharacteristic.pVoltageExponent>
+	<cim:LoadResponseCharacteristic.qVoltageExponent>0</cim:LoadResponseCharacteristic.qVoltageExponent>
+	<cim:IdentifiedObject.name>LOAD3</cim:IdentifiedObject.name>
+</cim:LoadResponseCharacteristic>
+<cim:ConformLoadGroup rdf:ID="_84fe9e34-b242-5a96-8247-bf980b91c6d2">
+	<cim:IdentifiedObject.name>LOAD2</cim:IdentifiedObject.name>
+</cim:ConformLoadGroup>
+<cim:CurveData rdf:ID="_85089f02-61a1-52f1-93f7-61293acbab5d">
+	<cim:CurveData.xvalue>-1000</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-300</cim:CurveData.y1value>
+	<cim:CurveData.y2value>300</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_f85bc0d3-e562-5bf9-beac-8d70ecbc94a9"/>
+</cim:CurveData>
+<cim:Breaker rdf:ID="_85b4bbd2-0723-5a0c-bb19-c693c46fa049">
+	<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+	<cim:Switch.retained>true</cim:Switch.retained>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_7559d352-e87f-5937-8889-a2fd830feb6a"/>
+	<cim:IdentifiedObject.name>STRASP7</cim:IdentifiedObject.name>
+</cim:Breaker>
+<cim:Terminal rdf:ID="_861a81bc-47eb-5361-a739-646261ddf96d">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_85b4bbd2-0723-5a0c-bb19-c693c46fa049"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>STRASP7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:CurrentLimit rdf:ID="_863a8419-3b1f-504f-8ee8-cd725862444d">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_6f6ce867-3279-53bd-86e7-11a6d82195bf"/>
+	<cim:IdentifiedObject.name>LILLEY761</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:CurrentLimit rdf:ID="_871629c8-074d-5bcb-b19c-baae64eadc60">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_a1ad4088-9573-5c25-a265-c893f5881e74"/>
+	<cim:IdentifiedObject.name>LILLEL71STRAS</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:ACDCConverterDCTerminal rdf:ID="_8762ec45-ecf0-50ad-a07a-ff2750b9f529">
+	<cim:ACDCConverterDCTerminal.DCConductingEquipment rdf:resource="#_56eb655a-be28-5a8a-9054-5f538424654f"/>
+	<cim:DCBaseTerminal.DCNode rdf:resource="#_9f841d34-407f-58b7-9297-536c2a38aa0c"/>
+	<cim:IdentifiedObject.name>LILLEL91NANTE</cim:IdentifiedObject.name>
+</cim:ACDCConverterDCTerminal>
+<cim:Terminal rdf:ID="_87cabe70-3f2c-51ac-8afa-c621786f7136">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_db038198-3502-5ecc-88ca-3d8c278a2a48"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>2A1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:OperationalLimitSet rdf:ID="_87e25b67-4d18-50cc-8d2b-3baa9ce331b5">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_4ea35251-f8b9-564e-9c27-d7b0a5a6c627"/>
+	<cim:IdentifiedObject.name>LILLEL61LYON1</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:LinearShuntCompensator rdf:ID="_881e6a58-8936-5058-84f9-5ba3842c9112">
+	<cim:LinearShuntCompensator.bPerSection>0.000395062</cim:LinearShuntCompensator.bPerSection>
+	<cim:LinearShuntCompensator.gPerSection>0</cim:LinearShuntCompensator.gPerSection>
+	<cim:ShuntCompensator.maximumSections>1</cim:ShuntCompensator.maximumSections>
+	<cim:ShuntCompensator.nomU>225</cim:ShuntCompensator.nomU>
+	<cim:ShuntCompensator.normalSections>0</cim:ShuntCompensator.normalSections>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4dd9513d-c4ad-57ef-b673-1b0c606868d6"/>
+	<cim:IdentifiedObject.name>CAPA1</cim:IdentifiedObject.name>
+</cim:LinearShuntCompensator>
+<cim:CurrentLimit rdf:ID="_88fc23b5-199b-55fe-9f0a-4e6603674997">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_184f787f-930c-5a62-bcc8-27cbb0f38618"/>
+	<cim:IdentifiedObject.name>LILLEL71MARSE</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:PowerTransformerEnd rdf:ID="_890009d3-7cdb-5c07-9aac-070377f5bc8e">
+	<cim:PowerTransformerEnd.b>0</cim:PowerTransformerEnd.b>
+	<cim:PowerTransformerEnd.connectionKind rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#WindingConnection.D"/>
+	<cim:PowerTransformerEnd.g>0</cim:PowerTransformerEnd.g>
+	<cim:PowerTransformerEnd.r>0</cim:PowerTransformerEnd.r>
+	<cim:PowerTransformerEnd.ratedS>600</cim:PowerTransformerEnd.ratedS>
+	<cim:PowerTransformerEnd.ratedU>225</cim:PowerTransformerEnd.ratedU>
+	<cim:PowerTransformerEnd.x>0</cim:PowerTransformerEnd.x>
+	<cim:PowerTransformerEnd.PowerTransformer rdf:resource="#_6508ff71-60a4-52b9-aa5c-11abe867cfa1"/>
+	<cim:TransformerEnd.endNumber>2</cim:TransformerEnd.endNumber>
+	<cim:TransformerEnd.BaseVoltage rdf:resource="#_63893f24-5b4e-407c-9a1e-4ff71121f33c"/>
+	<cim:TransformerEnd.Terminal rdf:resource="#_a08458d0-398b-5735-98a7-a22445f090ae"/>
+	<cim:IdentifiedObject.name>LILLEY761</cim:IdentifiedObject.name>
+</cim:PowerTransformerEnd>
+<cim:PhaseTapChangerTablePoint rdf:ID="_89358bf4-4b62-5fcc-9b06-39e8b5def4af">
+	<cim:PhaseTapChangerTablePoint.angle>-90</cim:PhaseTapChangerTablePoint.angle>
+	<cim:PhaseTapChangerTablePoint.PhaseTapChangerTable rdf:resource="#_3740a871-4c3d-5bf6-a925-946a5d75a394"/>
+	<cim:TapChangerTablePoint.b>0</cim:TapChangerTablePoint.b>
+	<cim:TapChangerTablePoint.g>0</cim:TapChangerTablePoint.g>
+	<cim:TapChangerTablePoint.r>0</cim:TapChangerTablePoint.r>
+	<cim:TapChangerTablePoint.ratio>0.833333</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>1</cim:TapChangerTablePoint.step>
+	<cim:TapChangerTablePoint.x>-99.3976</cim:TapChangerTablePoint.x>
+</cim:PhaseTapChangerTablePoint>
+<cim:ACLineSegment rdf:ID="_8a925e03-1009-5537-88f0-c05501d102f5">
+	<cim:ACLineSegment.bch>0.0004</cim:ACLineSegment.bch>
+	<cim:ACLineSegment.gch>0</cim:ACLineSegment.gch>
+	<cim:ACLineSegment.r>3</cim:ACLineSegment.r>
+	<cim:ACLineSegment.x>30</cim:ACLineSegment.x>
+	<cim:ConductingEquipment.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:IdentifiedObject.name>LILLEL71MARSE</cim:IdentifiedObject.name>
+</cim:ACLineSegment>
+<cim:ThermalGeneratingUnit rdf:ID="_8bd09ea9-872c-51c6-bb5a-9e67d585df12">
+	<cim:GeneratingUnit.initialP>500</cim:GeneratingUnit.initialP>
+	<cim:GeneratingUnit.longPF>0.03</cim:GeneratingUnit.longPF>
+	<cim:GeneratingUnit.maxOperatingP>500</cim:GeneratingUnit.maxOperatingP>
+	<cim:GeneratingUnit.minOperatingP>50</cim:GeneratingUnit.minOperatingP>
+	<cim:GeneratingUnit.nominalP>500</cim:GeneratingUnit.nominalP>
+	<cim:GeneratingUnit.shortPF>0.03</cim:GeneratingUnit.shortPF>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_ad5294f0-65be-5d4e-8652-ea6c26fe3a97"/>
+	<cim:IdentifiedObject.name>TAG</cim:IdentifiedObject.name>
+</cim:ThermalGeneratingUnit>
+<cim:VoltageLevel rdf:ID="_8c4a3760-ac2d-5d02-ac99-d51c1574f7d5">
+	<cim:VoltageLevel.highVoltageLimit>460</cim:VoltageLevel.highVoltageLimit>
+	<cim:VoltageLevel.lowVoltageLimit>340</cim:VoltageLevel.lowVoltageLimit>
+	<cim:VoltageLevel.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:VoltageLevel.Substation rdf:resource="#_9d9e2b54-e682-5a2a-8be6-45d437f98362"/>
+	<cim:IdentifiedObject.name>ZNANTP7</cim:IdentifiedObject.name>
+</cim:VoltageLevel>
+<cim:Terminal rdf:ID="_8c4e481f-977c-56c7-8335-42e3efe05015">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_c94a1fa9-2166-5d79-9a75-35c7f0bd9ca6"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LYON1L71PARIS</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:ReactiveCapabilityCurve rdf:ID="_8d9f5c5a-2017-574d-bf5f-46651ec74c60">
+	<cim:Curve.curveStyle rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#CurveStyle.straightLineYValues"/>
+	<cim:Curve.xUnit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.W"/>
+	<cim:Curve.y1Unit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.VAr"/>
+	<cim:Curve.y2Unit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.VAr"/>
+	<cim:IdentifiedObject.name>WIND</cim:IdentifiedObject.name>
+</cim:ReactiveCapabilityCurve>
+<cim:Breaker rdf:ID="_8e134d04-b50c-5897-92ad-4de091ac7b96">
+	<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+	<cim:Switch.retained>true</cim:Switch.retained>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Breaker>
+<cim:RatioTapChangerTablePoint rdf:ID="_8ffd21ae-7b13-564c-8a89-ef50e1fcb141">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>1.08584</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>19</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Terminal rdf:ID="_903e6f59-28c9-5153-91aa-0704619f4cd6">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_746dd38f-d761-52ac-8064-19a69d98c582"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>NUCL1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:OperationalLimitSet rdf:ID="_90e2c5ab-8f0f-50af-ac38-862c268ec39a">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_1112ca9f-aed8-53b5-a330-060b3bedba94"/>
+	<cim:IdentifiedObject.name>BORDEL61NANCY</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:Terminal rdf:ID="_914aaad3-5b35-50d4-aebd-851db56b663b">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_74c9f601-340a-5529-8d8e-b9caae2fc3f5"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEP6</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChangerTablePoint rdf:ID="_9158779b-7f25-5725-aff2-6adaf7112fbe">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>0.889494</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>1</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:RatioTapChangerTablePoint rdf:ID="_92c29f62-d173-5a8f-9128-ed7352ed41b9">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>1.05985</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>17</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:BusbarSection rdf:ID="_94215121-bdf5-529a-9bb5-bfced4555b2a">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_19ca914a-4524-51d1-81e8-840ec255ec2f"/>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:Breaker rdf:ID="_94d552ae-af68-5bb8-9573-c20c5f52b3e6">
+	<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+	<cim:Switch.retained>true</cim:Switch.retained>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Breaker>
+<cim:RatioTapChanger rdf:ID="_96855189-23bd-52a7-b248-8c5276d16da3">
+	<cim:RatioTapChanger.stepVoltageIncrement>11.1111</cim:RatioTapChanger.stepVoltageIncrement>
+	<cim:RatioTapChanger.tculControlMode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#TransformerControlMode.volt"/>
+	<cim:RatioTapChanger.TransformerEnd rdf:resource="#_ad083124-0274-5058-ba42-b61577949f48"/>
+	<cim:RatioTapChanger.RatioTapChangerTable rdf:resource="#_d0f9ee26-f8ca-5f67-8a62-77edbd5b6922"/>
+	<cim:TapChanger.highStep>3</cim:TapChanger.highStep>
+	<cim:TapChanger.lowStep>1</cim:TapChanger.lowStep>
+	<cim:TapChanger.ltcFlag>true</cim:TapChanger.ltcFlag>
+	<cim:TapChanger.neutralStep>2</cim:TapChanger.neutralStep>
+	<cim:TapChanger.neutralU>400</cim:TapChanger.neutralU>
+	<cim:TapChanger.normalStep>2</cim:TapChanger.normalStep>
+	<cim:TapChanger.TapChangerControl rdf:resource="#_aca5c66e-ee3e-5dce-b83c-2d0ca9b4f386"/>
+	<cim:IdentifiedObject.name>LILLEY761</cim:IdentifiedObject.name>
+</cim:RatioTapChanger>
+<cim:BusbarSection rdf:ID="_98602657-2c16-5410-9d09-caea8fef8db7">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_7559d352-e87f-5937-8889-a2fd830feb6a"/>
+	<cim:IdentifiedObject.name>1B1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:RatioTapChangerTablePoint rdf:ID="_99237a68-ba67-535f-88bd-58a78ae7a843">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_5c134967-ff99-560b-97b8-cbfeee4b073e"/>
+	<cim:TapChangerTablePoint.ratio>0.909091</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>1</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Terminal rdf:ID="_992f154d-3b07-53ab-a7bc-6c52b701a169">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_fd0a7b08-0f21-5ce2-bc07-4a121a7b8821"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>NANCYP6</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChangerTablePoint rdf:ID="_993660f3-5b73-54ee-b24a-9338e7632df4">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>0.956776</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>8</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:OperationalLimitSet rdf:ID="_9992527d-5169-54cc-90af-097c1f8990af">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_bb75c271-f548-579e-9b01-3cf4697085bc"/>
+	<cim:IdentifiedObject.name>LYON1Y631</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:CurveData rdf:ID="_9a2181ca-3bcd-5f58-ad2e-1d2628506714">
+	<cim:CurveData.xvalue>20</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-20</cim:CurveData.y1value>
+	<cim:CurveData.y2value>20</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_6d09f645-223d-5c02-bd76-6f4c054536cf"/>
+</cim:CurveData>
+<cim:DCLineSegment rdf:ID="_9ac6e845-5a91-56b2-b46c-8624bc8dc296">
+	<cim:DCLineSegment.resistance>0.2</cim:DCLineSegment.resistance>
+	<cim:IdentifiedObject.name>LILLEL91NANTE</cim:IdentifiedObject.name>
+</cim:DCLineSegment>
+<cim:Terminal rdf:ID="_9b59bbe8-0ee4-5a3b-b743-720e7087d6a8">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_0187fa29-7812-51ee-8327-598b771b9ca9"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>BATTE</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:HydroGeneratingUnit rdf:ID="_9ccba59b-f281-5928-a74b-a58d6ab4c798">
+	<cim:HydroGeneratingUnit.energyConversionCapability rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#HydroEnergyConversionKind.generator"/>
+	<cim:HydroGeneratingUnit.HydroPowerPlant rdf:resource="#_d7621f41-0455-5129-b325-fdab3fef7497"/>
+	<cim:GeneratingUnit.initialP>500</cim:GeneratingUnit.initialP>
+	<cim:GeneratingUnit.longPF>0.04</cim:GeneratingUnit.longPF>
+	<cim:GeneratingUnit.maxOperatingP>500</cim:GeneratingUnit.maxOperatingP>
+	<cim:GeneratingUnit.minOperatingP>50</cim:GeneratingUnit.minOperatingP>
+	<cim:GeneratingUnit.nominalP>500</cim:GeneratingUnit.nominalP>
+	<cim:GeneratingUnit.shortPF>0.04</cim:GeneratingUnit.shortPF>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4a0865d1-808c-5c11-86f7-bafe9b1c32ca"/>
+	<cim:IdentifiedObject.name>HYDRO</cim:IdentifiedObject.name>
+</cim:HydroGeneratingUnit>
+<cim:OperationalLimitSet rdf:ID="_9d2bae03-8edc-5e9e-9e8d-dd0a6acb2283">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_77d34bbe-c935-56ed-ad72-b2fd5bf97905"/>
+	<cim:IdentifiedObject.name>BORDEL61LILLE</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:BusbarSection rdf:ID="_9d4567b4-6af0-5bbd-896f-60c20af33cb3">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_6ff56642-53eb-56e7-a867-43972fd61d92"/>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:Substation rdf:ID="_9d9e2b54-e682-5a2a-8be6-45d437f98362">
+	<cim:Substation.Region rdf:resource="#_17cf7116-571a-59aa-9988-dd181f33d9b1"/>
+	<cim:IdentifiedObject.name>ZNANT</cim:IdentifiedObject.name>
+</cim:Substation>
+<cim:CurrentLimit rdf:ID="_9de04660-eeab-56da-a471-a12ebfa50136">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_87e25b67-4d18-50cc-8d2b-3baa9ce331b5"/>
+	<cim:IdentifiedObject.name>LILLEL61LYON1</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:Terminal rdf:ID="_9e389824-fcb3-5910-a041-c00f7b8a9301">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_4fa294ee-b5ed-5319-a248-c5a8d1be7366"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LYON1Y631</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:DCNode rdf:ID="_9f841d34-407f-58b7-9297-536c2a38aa0c">
+	<cim:DCNode.DCEquipmentContainer rdf:resource="#_25d3bbc4-de77-5f6b-8755-5b0c03b1f8fc"/>
+	<cim:IdentifiedObject.name>LILLEL91NANTE</cim:IdentifiedObject.name>
+</cim:DCNode>
+<cim:RegulatingControl rdf:ID="_9ff87c77-42c1-5268-bd25-042dbd9224ba">
+	<cim:RegulatingControl.mode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#RegulatingControlModeKind.voltage"/>
+	<cim:RegulatingControl.Terminal rdf:resource="#_f58c2c43-3ffe-5176-bead-2597c86b1321"/>
+	<cim:IdentifiedObject.name>RDC1</cim:IdentifiedObject.name>
+</cim:RegulatingControl>
+<cim:RatioTapChangerTablePoint rdf:ID="_a00b165c-c837-546b-82f7-5ae8f4785fbb">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>1.03507</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>15</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:SynchronousMachine rdf:ID="_a01aef53-0b71-5877-a1d2-4857c976704e">
+	<cim:SynchronousMachine.type rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#SynchronousMachineKind.generator"/>
+	<cim:SynchronousMachine.InitialReactiveCapabilityCurve rdf:resource="#_8d9f5c5a-2017-574d-bf5f-46651ec74c60"/>
+	<cim:RotatingMachine.ratedS>100.499</cim:RotatingMachine.ratedS>
+	<cim:RotatingMachine.GeneratingUnit rdf:resource="#_2a3679e1-b7a8-5f59-a6ad-2d23f7f288c2"/>
+	<cim:RegulatingCondEq.RegulatingControl rdf:resource="#_75189d84-df38-54c7-9fa5-77a6cfcea6a6"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_0fcb398e-723d-54ec-ab4d-07d266504d31"/>
+	<cim:IdentifiedObject.name>WIND</cim:IdentifiedObject.name>
+</cim:SynchronousMachine>
+<cim:Terminal rdf:ID="_a08458d0-398b-5735-98a7-a22445f090ae">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_6508ff71-60a4-52b9-aa5c-11abe867cfa1"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEY761</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChangerTablePoint rdf:ID="_a12422f8-b206-51dd-a191-072c4e0c17ca">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>1.08584</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>19</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:CurveData rdf:ID="_a12fa367-6f87-5ff6-8814-cc5bb21d6743">
+	<cim:CurveData.xvalue>10</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-20</cim:CurveData.y1value>
+	<cim:CurveData.y2value>20</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_8d9f5c5a-2017-574d-bf5f-46651ec74c60"/>
+</cim:CurveData>
+<cim:OperationalLimitSet rdf:ID="_a1ad4088-9573-5c25-a265-c893f5881e74">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_e4278bd5-953a-5efd-8887-281a8cf4f5e9"/>
+	<cim:IdentifiedObject.name>LILLEL71STRAS</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:BusbarSection rdf:ID="_a28e0534-0d26-56db-b5fc-8f0d696abc38">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_6c1f4114-9e81-55c5-91ee-72deedd55d86"/>
+	<cim:IdentifiedObject.name>1B1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:RatioTapChangerTablePoint rdf:ID="_a35c0139-df10-5b03-bb0c-0935095c3eaf">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>1.14186</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>23</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Terminal rdf:ID="_a387df49-b0c5-5578-ada3-4610d6b08c60">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_cb50d260-dc1c-51e2-b52e-312d89961141"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>2.1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:ConformLoadGroup rdf:ID="_a39540b6-d22b-5515-9a9b-867683804d32">
+	<cim:IdentifiedObject.name>LOAD8</cim:IdentifiedObject.name>
+</cim:ConformLoadGroup>
+<cim:Terminal rdf:ID="_a3e1547f-22b5-5998-90e3-7a14fed9be45">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_7ebfe0f6-d617-5b13-aa2f-ea9bafa603cb"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LYON1Y761</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:DCTerminal rdf:ID="_a58ce1eb-3263-51d6-a102-08c691848a3b">
+	<cim:DCTerminal.DCConductingEquipment rdf:resource="#_9ac6e845-5a91-56b2-b46c-8624bc8dc296"/>
+	<cim:DCBaseTerminal.DCNode rdf:resource="#_0d6e28dc-4f64-57b5-b9b2-5f1d795fc591"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL91NANTE</cim:IdentifiedObject.name>
+</cim:DCTerminal>
+<cim:BusbarSection rdf:ID="_a6906c90-19e1-5d83-80a0-45a45e51eb8a">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_523a8aec-87c8-5fc5-a18e-78e4c88cc8ef"/>
+	<cim:IdentifiedObject.name>1B1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:PhaseTapChangerTablePoint rdf:ID="_a6a96302-0037-5ee2-b842-c88fcbea4dd3">
+	<cim:PhaseTapChangerTablePoint.angle>-45</cim:PhaseTapChangerTablePoint.angle>
+	<cim:PhaseTapChangerTablePoint.PhaseTapChangerTable rdf:resource="#_3740a871-4c3d-5bf6-a925-946a5d75a394"/>
+	<cim:TapChangerTablePoint.b>0</cim:TapChangerTablePoint.b>
+	<cim:TapChangerTablePoint.g>0</cim:TapChangerTablePoint.g>
+	<cim:TapChangerTablePoint.r>0</cim:TapChangerTablePoint.r>
+	<cim:TapChangerTablePoint.ratio>0.909091</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>2</cim:TapChangerTablePoint.step>
+	<cim:TapChangerTablePoint.x>-99.5181</cim:TapChangerTablePoint.x>
+</cim:PhaseTapChangerTablePoint>
+<cim:RatioTapChangerTablePoint rdf:ID="_a6b5d2f3-1551-5691-a679-80e2f2bce72d">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>1.12732</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>22</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:RatioTapChangerTablePoint rdf:ID="_a7988b05-47fd-5562-885a-fc835d05b941">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>0.898521</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>2</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Terminal rdf:ID="_a7b32b04-3fc1-5a4c-ba00-e678a340798f">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_d79f7773-5b75-51fc-a527-80be8a278c9d"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>BORDEL61LILLE</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChangerTablePoint rdf:ID="_a8001082-cfac-5584-b6c7-d06dd070cdcd">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>1.02311</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>14</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:OperationalLimitSet rdf:ID="_a811f0d3-d7bc-5aa2-9309-600ed8ffcbfc">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_40bb8305-8d40-59aa-8f45-2ab304d0bb1c"/>
+	<cim:IdentifiedObject.name>PARISL71ZNANT</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:CurveData rdf:ID="_a82a00d7-6537-5403-9724-1f539c5cccdb">
+	<cim:CurveData.xvalue>10</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-100</cim:CurveData.y1value>
+	<cim:CurveData.y2value>100</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_2c8682de-b7a1-59d7-b793-e767b8e6d035"/>
+</cim:CurveData>
+<cim:DCNode rdf:ID="_a9ee9d63-b1db-53dc-bf38-f48346191428">
+	<cim:DCNode.DCEquipmentContainer rdf:resource="#_274dd1ba-4081-5f1a-9b8a-ad5bceaa0be8"/>
+	<cim:IdentifiedObject.name>LILLEL91NANTE</cim:IdentifiedObject.name>
+</cim:DCNode>
+<cim:PowerTransformerEnd rdf:ID="_aa3315ac-6207-5011-b12e-26aba71e9f82">
+	<cim:PowerTransformerEnd.b>0</cim:PowerTransformerEnd.b>
+	<cim:PowerTransformerEnd.connectionKind rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#WindingConnection.D"/>
+	<cim:PowerTransformerEnd.g>0</cim:PowerTransformerEnd.g>
+	<cim:PowerTransformerEnd.r>0</cim:PowerTransformerEnd.r>
+	<cim:PowerTransformerEnd.ratedS>70</cim:PowerTransformerEnd.ratedS>
+	<cim:PowerTransformerEnd.ratedU>63</cim:PowerTransformerEnd.ratedU>
+	<cim:PowerTransformerEnd.x>0</cim:PowerTransformerEnd.x>
+	<cim:PowerTransformerEnd.PowerTransformer rdf:resource="#_3142e555-b04d-5c2f-8bdc-7ddcfeb68bc7"/>
+	<cim:TransformerEnd.endNumber>2</cim:TransformerEnd.endNumber>
+	<cim:TransformerEnd.BaseVoltage rdf:resource="#_baf92707-8261-5edd-8f51-1720817ba5b7"/>
+	<cim:TransformerEnd.Terminal rdf:resource="#_834c4540-4083-590a-96b9-fe599e1d039c"/>
+	<cim:IdentifiedObject.name>NANCYY631</cim:IdentifiedObject.name>
+</cim:PowerTransformerEnd>
+<cim:Breaker rdf:ID="_aaf84861-1470-5433-b766-27dcbb61a41e">
+	<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+	<cim:Switch.retained>true</cim:Switch.retained>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_6c1f4114-9e81-55c5-91ee-72deedd55d86"/>
+	<cim:IdentifiedObject.name>LYON1P7</cim:IdentifiedObject.name>
+</cim:Breaker>
+<cim:CurveData rdf:ID="_ac5d3596-6ec0-5571-b6ce-6f9ebdb0cccf">
+	<cim:CurveData.xvalue>500</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-10</cim:CurveData.y1value>
+	<cim:CurveData.y2value>10</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_4635ff07-a907-5b8c-84eb-af08641e6385"/>
+</cim:CurveData>
+<cim:TapChangerControl rdf:ID="_aca5c66e-ee3e-5dce-b83c-2d0ca9b4f386">
+	<cim:RegulatingControl.mode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#RegulatingControlModeKind.voltage"/>
+	<cim:RegulatingControl.Terminal rdf:resource="#_1025a07d-8f9b-5836-94e5-2e986ea30811"/>
+	<cim:IdentifiedObject.name>LILLEY761</cim:IdentifiedObject.name>
+</cim:TapChangerControl>
+<cim:PowerTransformerEnd rdf:ID="_ad083124-0274-5058-ba42-b61577949f48">
+	<cim:PowerTransformerEnd.b>0</cim:PowerTransformerEnd.b>
+	<cim:PowerTransformerEnd.connectionKind rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#WindingConnection.D"/>
+	<cim:PowerTransformerEnd.g>0</cim:PowerTransformerEnd.g>
+	<cim:PowerTransformerEnd.r>10</cim:PowerTransformerEnd.r>
+	<cim:PowerTransformerEnd.ratedS>600</cim:PowerTransformerEnd.ratedS>
+	<cim:PowerTransformerEnd.ratedU>400</cim:PowerTransformerEnd.ratedU>
+	<cim:PowerTransformerEnd.x>100</cim:PowerTransformerEnd.x>
+	<cim:PowerTransformerEnd.PowerTransformer rdf:resource="#_6508ff71-60a4-52b9-aa5c-11abe867cfa1"/>
+	<cim:TransformerEnd.endNumber>1</cim:TransformerEnd.endNumber>
+	<cim:TransformerEnd.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:TransformerEnd.Terminal rdf:resource="#_1025a07d-8f9b-5836-94e5-2e986ea30811"/>
+	<cim:IdentifiedObject.name>LILLEY761</cim:IdentifiedObject.name>
+</cim:PowerTransformerEnd>
+<cim:Substation rdf:ID="_ad5294f0-65be-5d4e-8652-ea6c26fe3a97">
+	<cim:Substation.Region rdf:resource="#_17cf7116-571a-59aa-9988-dd181f33d9b1"/>
+	<cim:IdentifiedObject.name>STRAS</cim:IdentifiedObject.name>
+</cim:Substation>
+<cim:RatioTapChangerTablePoint rdf:ID="_afdd63d5-71da-5a1c-a9e6-fb1f6d617829">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_d0f9ee26-f8ca-5f67-8a62-77edbd5b6922"/>
+	<cim:TapChangerTablePoint.ratio>1.11111</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>3</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:VsCapabilityCurve rdf:ID="_b0146faf-4a18-50b4-a8ac-b1ec6bfe8895">
+	<cim:Curve.curveStyle rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#CurveStyle.straightLineYValues"/>
+	<cim:Curve.xUnit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.W"/>
+	<cim:Curve.y1Unit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.VAr"/>
+	<cim:Curve.y2Unit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.VAr"/>
+	<cim:IdentifiedObject.name></cim:IdentifiedObject.name>
+</cim:VsCapabilityCurve>
+<cim:BusbarSection rdf:ID="_b14ae3ae-98f9-5258-ac94-66f12eec5e8e">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_523a8aec-87c8-5fc5-a18e-78e4c88cc8ef"/>
+	<cim:IdentifiedObject.name>1A1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:Terminal rdf:ID="_b179b0f9-b897-5440-96b3-6a980f3f39b4">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_aaf84861-1470-5433-b766-27dcbb61a41e"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LYON1P7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Breaker rdf:ID="_b19f9614-f5fe-5338-963d-070e7a70a580">
+	<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+	<cim:Switch.retained>true</cim:Switch.retained>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Breaker>
+<cim:Terminal rdf:ID="_b1a0b3aa-9122-5882-8ce6-91c3a6057acf">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_d8ec12d1-9d04-548b-b83a-2f3bf9c0a8ff"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>2.1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:ACLineSegment rdf:ID="_b1d41eed-2e6f-5493-b889-a528bc265a24">
+	<cim:ACLineSegment.bch>2e-05</cim:ACLineSegment.bch>
+	<cim:ACLineSegment.gch>2e-05</cim:ACLineSegment.gch>
+	<cim:ACLineSegment.r>10</cim:ACLineSegment.r>
+	<cim:ACLineSegment.x>10</cim:ACLineSegment.x>
+	<cim:ConductingEquipment.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:IdentifiedObject.name>NANTEL71ZNANT</cim:IdentifiedObject.name>
+</cim:ACLineSegment>
+<cim:RatioTapChangerTablePoint rdf:ID="_b25e8e08-2df3-59fc-9038-6f6573898d42">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>1.03507</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>15</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:RatioTapChangerTablePoint rdf:ID="_b2c68ae6-525c-519e-8bde-3aa2d73b58f2">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>1</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>12</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:TapChangerControl rdf:ID="_b2d667d3-26c9-53b1-b768-4f3125a22d8e">
+	<cim:RegulatingControl.mode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#RegulatingControlModeKind.voltage"/>
+	<cim:RegulatingControl.Terminal rdf:resource="#_834c4540-4083-590a-96b9-fe599e1d039c"/>
+	<cim:IdentifiedObject.name>NANCYY631</cim:IdentifiedObject.name>
+</cim:TapChangerControl>
+<cim:LoadResponseCharacteristic rdf:ID="_b473532d-6f35-5393-b4b6-8100ae5d8074">
+	<cim:LoadResponseCharacteristic.exponentModel>true</cim:LoadResponseCharacteristic.exponentModel>
+	<cim:LoadResponseCharacteristic.pVoltageExponent>0</cim:LoadResponseCharacteristic.pVoltageExponent>
+	<cim:LoadResponseCharacteristic.qVoltageExponent>0</cim:LoadResponseCharacteristic.qVoltageExponent>
+	<cim:IdentifiedObject.name>LOAD7</cim:IdentifiedObject.name>
+</cim:LoadResponseCharacteristic>
+<cim:FossilFuel rdf:ID="_b479429c-69d8-586c-9431-2aaa1f7156fe">
+	<cim:FossilFuel.fossilFuelType rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#FuelType.gas"/>
+	<cim:FossilFuel.ThermalGeneratingUnit rdf:resource="#_8bd09ea9-872c-51c6-bb5a-9e67d585df12"/>
+	<cim:IdentifiedObject.name>TAG</cim:IdentifiedObject.name>
+</cim:FossilFuel>
+<cim:CurrentLimit rdf:ID="_b5837ab5-70e0-5b64-a1fb-31a291507b70">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_521ac9ce-751d-569e-9327-a2bc1a07734b"/>
+	<cim:IdentifiedObject.name>LYON1L71PARIS</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:RegulatingControl rdf:ID="_b68f2d19-cf44-5896-92ba-a681009e0cfd">
+	<cim:RegulatingControl.mode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#RegulatingControlModeKind.voltage"/>
+	<cim:RegulatingControl.Terminal rdf:resource="#_eb6c4511-3b4f-59d1-b76f-c0945eee4d7e"/>
+	<cim:IdentifiedObject.name>PHOTO</cim:IdentifiedObject.name>
+</cim:RegulatingControl>
+<cim:SynchronousMachine rdf:ID="_b7723de5-3cef-51be-8781-febcd7cac2fc">
+	<cim:SynchronousMachine.type rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#SynchronousMachineKind.generator"/>
+	<cim:SynchronousMachine.InitialReactiveCapabilityCurve rdf:resource="#_4635ff07-a907-5b8c-84eb-af08641e6385"/>
+	<cim:RotatingMachine.ratedS>500.1</cim:RotatingMachine.ratedS>
+	<cim:RotatingMachine.GeneratingUnit rdf:resource="#_8bd09ea9-872c-51c6-bb5a-9e67d585df12"/>
+	<cim:RegulatingCondEq.RegulatingControl rdf:resource="#_3ac19696-52c9-594c-bc1c-28d8095ec015"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_7559d352-e87f-5937-8889-a2fd830feb6a"/>
+	<cim:IdentifiedObject.name>TAG</cim:IdentifiedObject.name>
+</cim:SynchronousMachine>
+<cim:CurveData rdf:ID="_b801cf38-6288-5fb9-a5b4-09e851deb5c4">
+	<cim:CurveData.xvalue>100</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-10</cim:CurveData.y1value>
+	<cim:CurveData.y2value>10</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_8d9f5c5a-2017-574d-bf5f-46651ec74c60"/>
+</cim:CurveData>
+<cim:RatioTapChangerTablePoint rdf:ID="_ba12b78e-bdae-5501-9299-0d1f9cc66fee">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>1.11315</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>21</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Terminal rdf:ID="_ba6f9055-a6fb-51e5-b87d-8db005a5fde0">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_50799a2d-58c5-50d3-af19-829a7e8c91c7"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>BORDEL62LILLE</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:ACDCConverterDCTerminal rdf:ID="_ba8a5d4b-b534-5b82-92bd-cf211d3617b6">
+	<cim:ACDCConverterDCTerminal.DCConductingEquipment rdf:resource="#_bb04d38f-86f4-5a8c-a110-5cc58ed591dc"/>
+	<cim:DCBaseTerminal.DCNode rdf:resource="#_a9ee9d63-b1db-53dc-bf38-f48346191428"/>
+	<cim:IdentifiedObject.name>LILLEL91NANTE</cim:IdentifiedObject.name>
+</cim:ACDCConverterDCTerminal>
+<cim:BaseVoltage rdf:ID="_baf92707-8261-5edd-8f51-1720817ba5b7">
+	<cim:BaseVoltage.nominalVoltage>63</cim:BaseVoltage.nominalVoltage>
+	<cim:IdentifiedObject.name>63</cim:IdentifiedObject.name>
+</cim:BaseVoltage>
+<cim:VsConverter rdf:ID="_bb04d38f-86f4-5a8c-a110-5cc58ed591dc">
+	<cim:VsConverter.CapabilityCurve rdf:resource="#_f85bc0d3-e562-5bf9-beac-8d70ecbc94a9"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_274dd1ba-4081-5f1a-9b8a-ad5bceaa0be8"/>
+	<cim:IdentifiedObject.name>LILLEL91NANTE_Ex</cim:IdentifiedObject.name>
+</cim:VsConverter>
+<cim:VsConverter rdf:ID="_bb139321-74a4-582a-9964-a65d317e00ff">
+	<cim:VsConverter.CapabilityCurve rdf:resource="#_51f9edfc-494a-59be-96bf-e249bad8f783"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_274dd1ba-4081-5f1a-9b8a-ad5bceaa0be8"/>
+	<cim:IdentifiedObject.name>LILLEL91NANTE_Ex</cim:IdentifiedObject.name>
+</cim:VsConverter>
+<cim:Terminal rdf:ID="_bb70c17e-b443-5a66-ad0e-efa86eaf9154">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_44356fed-9f28-5a17-b3f4-14a478909670"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LOAD8</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_bb75c271-f548-579e-9b01-3cf4697085bc">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_4fa294ee-b5ed-5319-a248-c5a8d1be7366"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LYON1Y631</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:CurveData rdf:ID="_bba9cd30-e560-519f-ab46-70a8ebed5228">
+	<cim:CurveData.xvalue>0</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-600</cim:CurveData.y1value>
+	<cim:CurveData.y2value>400</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_f85bc0d3-e562-5bf9-beac-8d70ecbc94a9"/>
+</cim:CurveData>
+<cim:CurrentLimit rdf:ID="_bccefb70-be64-586a-b264-3c0e3d39790f">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_1fcd52c1-c653-58c7-b5b5-9c0de10cc5f3"/>
+	<cim:IdentifiedObject.name>LILLEL61NANCY</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:Terminal rdf:ID="_bd8b0f31-a779-540e-a6e7-50c7d2a1cef2">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_f90afcc4-48e4-53a0-8c0f-6759e212e39f"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LYON1P6</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_bf98eeb4-cda5-550d-922c-2ea047cb954b">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_85b4bbd2-0723-5a0c-bb19-c693c46fa049"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>STRASP7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_bfebc250-ccff-578b-bff9-a47bc134f057">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_420ac0e4-82a2-567a-adef-17239dc71712"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>3B1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_c0434938-96c9-5c03-a2d6-ccdeab267238">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_f443de6c-4c38-5b50-8a85-c2f322569872"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:BusbarSection rdf:ID="_c0d5429f-74eb-500a-be09-c42a74756f2d">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_c7a3ae76-fb12-5572-9a0c-d63feb579ace"/>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:Terminal rdf:ID="_c4619918-6bb1-5d99-857f-ff5abcb1c357">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_14c56f25-fc4e-5003-9185-2c466cc89e90"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_c630b8d2-c602-5de3-adec-ad110b6db0b5">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_747f013f-e9e7-501c-9b2d-2d392945a24e"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LOAD1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:VoltageLevel rdf:ID="_c7a3ae76-fb12-5572-9a0c-d63feb579ace">
+	<cim:VoltageLevel.highVoltageLimit>245</cim:VoltageLevel.highVoltageLimit>
+	<cim:VoltageLevel.lowVoltageLimit>200</cim:VoltageLevel.lowVoltageLimit>
+	<cim:VoltageLevel.BaseVoltage rdf:resource="#_63893f24-5b4e-407c-9a1e-4ff71121f33c"/>
+	<cim:VoltageLevel.Substation rdf:resource="#_cc6a0cc4-4bb3-5bfc-a8b4-31c5249c1e20"/>
+	<cim:IdentifiedObject.name>LYON1P6</cim:IdentifiedObject.name>
+</cim:VoltageLevel>
+<cim:BusbarSection rdf:ID="_c82347b9-d6e3-5b62-a640-a0647292bff1">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_8c4a3760-ac2d-5d02-ac99-d51c1574f7d5"/>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:ConformLoad rdf:ID="_c8672a6c-9f49-5337-b0ac-e50dc74c3bf9">
+	<cim:ConformLoad.LoadGroup rdf:resource="#_4d79472a-8754-5d2c-a5ee-ae61fe576394"/>
+	<cim:EnergyConsumer.LoadResponse rdf:resource="#_b473532d-6f35-5393-b4b6-8100ae5d8074"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_3b1414ac-eb55-54c7-915f-d3ba00c301be"/>
+	<cim:IdentifiedObject.name>LOAD7</cim:IdentifiedObject.name>
+</cim:ConformLoad>
+<cim:RatioTapChangerTablePoint rdf:ID="_c8ff0bc9-7d34-53d1-825a-6b762b7ff3c4">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>0.926734</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>5</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Terminal rdf:ID="_c902fc08-a012-5e8c-8aba-f2cf242f5667">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_56886347-b7f5-5039-81d0-726210468d11"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:ACLineSegment rdf:ID="_c94a1fa9-2166-5d79-9a75-35c7f0bd9ca6">
+	<cim:ACLineSegment.bch>0.0004</cim:ACLineSegment.bch>
+	<cim:ACLineSegment.gch>0</cim:ACLineSegment.gch>
+	<cim:ACLineSegment.r>3</cim:ACLineSegment.r>
+	<cim:ACLineSegment.x>30</cim:ACLineSegment.x>
+	<cim:ConductingEquipment.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:IdentifiedObject.name>LYON1L71PARIS</cim:IdentifiedObject.name>
+</cim:ACLineSegment>
+<cim:ConformLoad rdf:ID="_c9a51a7b-797b-5f99-a44d-bb2780145135">
+	<cim:ConformLoad.LoadGroup rdf:resource="#_7404a7e0-29bd-5d9b-86e2-989535a74746"/>
+	<cim:EnergyConsumer.LoadResponse rdf:resource="#_faf3c86b-9eee-5045-93ed-e434d6cb98f6"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4dd9513d-c4ad-57ef-b673-1b0c606868d6"/>
+	<cim:IdentifiedObject.name>LOAD6</cim:IdentifiedObject.name>
+</cim:ConformLoad>
+<cim:Terminal rdf:ID="_ca16baa9-1656-5436-93a9-13f7324799a2">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_b1d41eed-2e6f-5493-b889-a528bc265a24"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>NANTEL71ZNANT</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:ConformLoadGroup rdf:ID="_cac68e9f-5c1a-561f-b69d-ed3288017360">
+	<cim:IdentifiedObject.name>LOAD1</cim:IdentifiedObject.name>
+</cim:ConformLoadGroup>
+<cim:Terminal rdf:ID="_cb34c757-5de0-5d2b-9ee6-17bc8fc076df">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_56eb655a-be28-5a8a-9054-5f538424654f"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL91NANTE_Or</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:BusbarSection rdf:ID="_cb50d260-dc1c-51e2-b52e-312d89961141">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_c7a3ae76-fb12-5572-9a0c-d63feb579ace"/>
+	<cim:IdentifiedObject.name>2.1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:RatioTapChangerTablePoint rdf:ID="_cbcd31d5-23fd-5471-8c36-f29145340c3d">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>0.946548</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>7</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Substation rdf:ID="_cc6a0cc4-4bb3-5bfc-a8b4-31c5249c1e20">
+	<cim:Substation.Region rdf:resource="#_17cf7116-571a-59aa-9988-dd181f33d9b1"/>
+	<cim:IdentifiedObject.name>LYON1</cim:IdentifiedObject.name>
+</cim:Substation>
+<cim:Terminal rdf:ID="_cc6bea34-768d-5f2b-a186-d277b02beb3f">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_0bbefa61-cd19-533a-bb08-a7c2185e4724"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL71LYON1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_cc8b2c19-2f7f-57f1-8426-31dac1904144">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_70a1a883-4c2d-5324-ad49-8da62e771af7"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>MARSEL71ZNANT</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:CurrentLimit rdf:ID="_cd7ed1d0-cddc-5ed2-994e-de3f4ace0a9d">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_9992527d-5169-54cc-90af-097c1f8990af"/>
+	<cim:IdentifiedObject.name>LYON1Y631</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:RatioTapChangerTablePoint rdf:ID="_ce63579f-95a9-5df2-b05e-cd133f0eab8b">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>1.20396</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>27</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:CurrentLimit rdf:ID="_cef1657d-82ea-5a1a-90b0-6f2fb59c6c12">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_a811f0d3-d7bc-5aa2-9309-600ed8ffcbfc"/>
+	<cim:IdentifiedObject.name>PARISL71ZNANT</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:RatioTapChangerTablePoint rdf:ID="_cf2a0ec9-de06-507d-9737-f9f1b52e5189">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>0.907732</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>3</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Terminal rdf:ID="_cf8f1d6f-1316-55f1-bb2d-d53961f0baad">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_9d4567b4-6af0-5bbd-896f-60c20af33cb3"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_cfd1432b-a5b0-5f17-a00a-908bf8b23de2">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_8a925e03-1009-5537-88f0-c05501d102f5"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL71MARSE</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:BusbarSection rdf:ID="_d0c978c7-0380-55b6-823b-6db7768f25b6">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4dd9513d-c4ad-57ef-b673-1b0c606868d6"/>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:RatioTapChangerTable rdf:ID="_d0f9ee26-f8ca-5f67-8a62-77edbd5b6922">
+	<cim:IdentifiedObject.name>LILLEY761</cim:IdentifiedObject.name>
+</cim:RatioTapChangerTable>
+<cim:ControlAreaGeneratingUnit rdf:ID="_d1f80289-482b-50a3-926f-ba615c688387">
+	<cim:ControlAreaGeneratingUnit.ControlArea rdf:resource="#_7917d422-d956-5595-9489-5ad54aeae656"/>
+	<cim:ControlAreaGeneratingUnit.GeneratingUnit rdf:resource="#_d593469f-c86f-5686-85a3-521dccd9adc7"/>
+	<cim:IdentifiedObject.name>FR</cim:IdentifiedObject.name>
+</cim:ControlAreaGeneratingUnit>
+<cim:Terminal rdf:ID="_d232902e-7fc0-5cae-9169-7e36eebc78ac">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_c0d5429f-74eb-500a-be09-c42a74756f2d"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChanger rdf:ID="_d2929bde-3b62-5ab3-bdfd-ca0f50162941">
+	<cim:RatioTapChanger.stepVoltageIncrement>11.1111</cim:RatioTapChanger.stepVoltageIncrement>
+	<cim:RatioTapChanger.tculControlMode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#TransformerControlMode.volt"/>
+	<cim:RatioTapChanger.TransformerEnd rdf:resource="#_fa3595c6-4f8a-5708-956a-ab42fe87f0f3"/>
+	<cim:RatioTapChanger.RatioTapChangerTable rdf:resource="#_5c134967-ff99-560b-97b8-cbfeee4b073e"/>
+	<cim:TapChanger.highStep>3</cim:TapChanger.highStep>
+	<cim:TapChanger.lowStep>1</cim:TapChanger.lowStep>
+	<cim:TapChanger.ltcFlag>true</cim:TapChanger.ltcFlag>
+	<cim:TapChanger.neutralStep>2</cim:TapChanger.neutralStep>
+	<cim:TapChanger.neutralU>400</cim:TapChanger.neutralU>
+	<cim:TapChanger.normalStep>2</cim:TapChanger.normalStep>
+	<cim:TapChanger.TapChangerControl rdf:resource="#_3977cad7-f4f3-5420-a904-de5db5bc66cb"/>
+	<cim:IdentifiedObject.name>LYON1Y761</cim:IdentifiedObject.name>
+</cim:RatioTapChanger>
+<cim:PowerTransformerEnd rdf:ID="_d2a89039-b03e-5c6c-94a2-3825151a97bb">
+	<cim:PowerTransformerEnd.b>0</cim:PowerTransformerEnd.b>
+	<cim:PowerTransformerEnd.connectionKind rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#WindingConnection.D"/>
+	<cim:PowerTransformerEnd.g>0</cim:PowerTransformerEnd.g>
+	<cim:PowerTransformerEnd.r>0</cim:PowerTransformerEnd.r>
+	<cim:PowerTransformerEnd.ratedS>70</cim:PowerTransformerEnd.ratedS>
+	<cim:PowerTransformerEnd.ratedU>63</cim:PowerTransformerEnd.ratedU>
+	<cim:PowerTransformerEnd.x>0</cim:PowerTransformerEnd.x>
+	<cim:PowerTransformerEnd.PowerTransformer rdf:resource="#_4fa294ee-b5ed-5319-a248-c5a8d1be7366"/>
+	<cim:TransformerEnd.endNumber>2</cim:TransformerEnd.endNumber>
+	<cim:TransformerEnd.BaseVoltage rdf:resource="#_baf92707-8261-5edd-8f51-1720817ba5b7"/>
+	<cim:TransformerEnd.Terminal rdf:resource="#_bb75c271-f548-579e-9b01-3cf4697085bc"/>
+	<cim:IdentifiedObject.name>LYON1Y631</cim:IdentifiedObject.name>
+</cim:PowerTransformerEnd>
+<cim:OperationalLimitSet rdf:ID="_d2b45181-33e6-50ae-890d-5e97e3a588c9">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_cc6bea34-768d-5f2b-a186-d277b02beb3f"/>
+	<cim:IdentifiedObject.name>LILLEL71LYON1</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:Terminal rdf:ID="_d423d0e3-4015-51ce-b26a-39a4dde6a5ef">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_b1d41eed-2e6f-5493-b889-a528bc265a24"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>NANTEL71ZNANT</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChangerTablePoint rdf:ID="_d43e7161-9704-5d5a-a0f3-922d3fb07640">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>1.02311</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>14</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Substation rdf:ID="_d4720eb5-86a6-5ab8-86bb-cfbb8b4f8cf9">
+	<cim:Substation.Region rdf:resource="#_17cf7116-571a-59aa-9988-dd181f33d9b1"/>
+	<cim:IdentifiedObject.name>BORDE</cim:IdentifiedObject.name>
+</cim:Substation>
+<cim:RatioTapChangerTablePoint rdf:ID="_d482e5a8-ad28-5883-b281-6cc92082d5d2">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>1.05985</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>17</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Terminal rdf:ID="_d546053a-929c-59f0-bffe-c4f92d1a212c">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_f92cb52e-31e1-5f9e-aadb-346859647367"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>2B2</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChangerTablePoint rdf:ID="_d5568cbf-1f14-5bbb-8c68-5232d156b777">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>1.01142</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>13</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:OperationalLimitSet rdf:ID="_d586897e-248f-529e-927d-6a6d6ab381a5">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_cc8b2c19-2f7f-57f1-8426-31dac1904144"/>
+	<cim:IdentifiedObject.name>MARSEL71ZNANT</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:CurveData rdf:ID="_d586fcdc-ed31-5598-9180-e840b9b8d5c6">
+	<cim:CurveData.xvalue>0</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-600</cim:CurveData.y1value>
+	<cim:CurveData.y2value>400</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_51f9edfc-494a-59be-96bf-e249bad8f783"/>
+</cim:CurveData>
+<cim:NuclearGeneratingUnit rdf:ID="_d593469f-c86f-5686-85a3-521dccd9adc7">
+	<cim:GeneratingUnit.initialP>1500</cim:GeneratingUnit.initialP>
+	<cim:GeneratingUnit.longPF>0.04</cim:GeneratingUnit.longPF>
+	<cim:GeneratingUnit.maxOperatingP>1500</cim:GeneratingUnit.maxOperatingP>
+	<cim:GeneratingUnit.minOperatingP>500</cim:GeneratingUnit.minOperatingP>
+	<cim:GeneratingUnit.nominalP>1500</cim:GeneratingUnit.nominalP>
+	<cim:GeneratingUnit.shortPF>0.04</cim:GeneratingUnit.shortPF>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_f69384a4-3577-5373-ab3c-f438982c860b"/>
+	<cim:IdentifiedObject.name>NUCL1</cim:IdentifiedObject.name>
+</cim:NuclearGeneratingUnit>
+<cim:Terminal rdf:ID="_d5eae410-e17c-590b-a166-c951dece4260">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_4eba93fe-da96-53cf-aa64-d17bb9264e35"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>2B1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:HydroPowerPlant rdf:ID="_d7621f41-0455-5129-b325-fdab3fef7497">
+	<cim:HydroPowerPlant.hydroPlantStorageType rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#HydroPlantStorageKind.runOfRiver"/>
+	<cim:IdentifiedObject.name>HYDRO</cim:IdentifiedObject.name>
+</cim:HydroPowerPlant>
+<cim:ACLineSegment rdf:ID="_d79f7773-5b75-51fc-a527-80be8a278c9d">
+	<cim:ACLineSegment.bch>0.0004</cim:ACLineSegment.bch>
+	<cim:ACLineSegment.gch>0</cim:ACLineSegment.gch>
+	<cim:ACLineSegment.r>3</cim:ACLineSegment.r>
+	<cim:ACLineSegment.x>30</cim:ACLineSegment.x>
+	<cim:ConductingEquipment.BaseVoltage rdf:resource="#_63893f24-5b4e-407c-9a1e-4ff71121f33c"/>
+	<cim:IdentifiedObject.name>BORDEL61LILLE</cim:IdentifiedObject.name>
+</cim:ACLineSegment>
+<cim:BusbarSection rdf:ID="_d8ec12d1-9d04-548b-b83a-2f3bf9c0a8ff">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_764af332-5143-5fb5-8846-1ff78bade090"/>
+	<cim:IdentifiedObject.name>2.1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:Terminal rdf:ID="_da6db39e-b2e0-58d0-839d-0052200efadc">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_e5f7d8d7-32d4-58b8-aa48-285370aa1675"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1A1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Substation rdf:ID="_dafed079-1379-51ad-8f78-3725f12c3fbd">
+	<cim:Substation.Region rdf:resource="#_17cf7116-571a-59aa-9988-dd181f33d9b1"/>
+	<cim:IdentifiedObject.name>NANCY</cim:IdentifiedObject.name>
+</cim:Substation>
+<cim:BusbarSection rdf:ID="_db038198-3502-5ecc-88ca-3d8c278a2a48">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>2A1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:RatioTapChanger rdf:ID="_dbee89a9-c45a-533e-85a4-0b71b8e1dd24">
+	<cim:RatioTapChanger.stepVoltageIncrement>1.0252</cim:RatioTapChanger.stepVoltageIncrement>
+	<cim:RatioTapChanger.tculControlMode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#TransformerControlMode.volt"/>
+	<cim:RatioTapChanger.TransformerEnd rdf:resource="#_aa3315ac-6207-5011-b12e-26aba71e9f82"/>
+	<cim:RatioTapChanger.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChanger.highStep>27</cim:TapChanger.highStep>
+	<cim:TapChanger.lowStep>1</cim:TapChanger.lowStep>
+	<cim:TapChanger.ltcFlag>true</cim:TapChanger.ltcFlag>
+	<cim:TapChanger.neutralStep>12</cim:TapChanger.neutralStep>
+	<cim:TapChanger.neutralU>63</cim:TapChanger.neutralU>
+	<cim:TapChanger.normalStep>12</cim:TapChanger.normalStep>
+	<cim:TapChanger.TapChangerControl rdf:resource="#_b2d667d3-26c9-53b1-b768-4f3125a22d8e"/>
+	<cim:IdentifiedObject.name>NANCYY631</cim:IdentifiedObject.name>
+</cim:RatioTapChanger>
+<cim:Terminal rdf:ID="_dc3f38d7-e35e-5355-8d24-74b13aebd63b">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_02d2c776-2bc4-594d-8add-1a29cd67836b"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LYON1L72PARIS</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_dc7aee45-7eab-5cd7-a916-944f0b159dcd">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_39d8e509-b456-5ebf-aa1e-8eae77f44df8"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LOAD5</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:TapChangerControl rdf:ID="_dcb39c6f-a69e-5167-ab2c-ca7b9e7d9d85">
+	<cim:RegulatingControl.mode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#RegulatingControlModeKind.activePower"/>
+	<cim:RegulatingControl.Terminal rdf:resource="#_834c4540-4083-590a-96b9-fe599e1d039c"/>
+	<cim:IdentifiedObject.name>NANCYY631</cim:IdentifiedObject.name>
+</cim:TapChangerControl>
+<cim:CurrentLimit rdf:ID="_de0158a7-8a22-5c85-a31d-2b15d02fc796">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_27c8b22b-31d4-5a63-b863-54d93f8d7166"/>
+	<cim:IdentifiedObject.name>LYON1L31NANCY</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:RatioTapChangerTablePoint rdf:ID="_de350b35-be6b-590a-b40f-a634c527f370">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>0.917135</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>4</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Terminal rdf:ID="_df7e4b13-8cc4-5f3d-9c30-e09c17638295">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_179743c9-9fb2-5afa-b054-c2058c62e84e"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>SVC1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_df856253-b2ca-5be8-a850-b1963db1f3c5">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_94d552ae-af68-5bb8-9573-c20c5f52b3e6"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_e03d40b8-78b2-58f3-8422-2729a0dd86ea">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_70a1a883-4c2d-5324-ad49-8da62e771af7"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>MARSEL71ZNANT</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:SynchronousMachine rdf:ID="_e08bf8fc-3a89-5852-8ad8-ea4b1e7c64bf">
+	<cim:SynchronousMachine.type rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#SynchronousMachineKind.generator"/>
+	<cim:SynchronousMachine.InitialReactiveCapabilityCurve rdf:resource="#_2c8682de-b7a1-59d7-b793-e767b8e6d035"/>
+	<cim:RotatingMachine.ratedS>206.155</cim:RotatingMachine.ratedS>
+	<cim:RotatingMachine.GeneratingUnit rdf:resource="#_464a2ed7-e2ef-5339-b5f3-362884aeaddb"/>
+	<cim:RegulatingCondEq.RegulatingControl rdf:resource="#_b68f2d19-cf44-5896-92ba-a681009e0cfd"/>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_523a8aec-87c8-5fc5-a18e-78e4c88cc8ef"/>
+	<cim:IdentifiedObject.name>PHOTO</cim:IdentifiedObject.name>
+</cim:SynchronousMachine>
+<cim:Terminal rdf:ID="_e0c30d7f-bcd1-54c3-928e-da2876812ab3">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_b19f9614-f5fe-5338-963d-070e7a70a580"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:CurveData rdf:ID="_e1ebf34c-d4e9-5a23-9c34-0f51f57fed16">
+	<cim:CurveData.xvalue>-1000</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-300</cim:CurveData.y1value>
+	<cim:CurveData.y2value>300</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_51f9edfc-494a-59be-96bf-e249bad8f783"/>
+</cim:CurveData>
+<cim:Terminal rdf:ID="_e1fadc53-3465-5870-ab18-0f686d34a54f">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_6323101b-b6e8-5d2c-8e2a-767d3731a796"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LOAD4</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_e1fe157a-44f4-549e-91e8-0933dbb32b1d">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_0dfaea66-aa19-5acd-944f-35d3c44b418d"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL91NANTE_Or</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Substation rdf:ID="_e2333714-7fd2-59e0-89a9-65ed5695bec0">
+	<cim:Substation.Region rdf:resource="#_17cf7116-571a-59aa-9988-dd181f33d9b1"/>
+	<cim:IdentifiedObject.name>MARSE</cim:IdentifiedObject.name>
+</cim:Substation>
+<cim:Terminal rdf:ID="_e4278bd5-953a-5efd-8887-281a8cf4f5e9">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_2716ee7b-7226-510d-aa63-79c766be05c0"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL71STRAS</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:RatioTapChangerTablePoint rdf:ID="_e56a90ee-6d81-5843-b7d2-be4ad082f8a9">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_27945087-a838-5287-bb13-8a9e6b588201"/>
+	<cim:TapChangerTablePoint.ratio>1.17209</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>25</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:BusbarSection rdf:ID="_e5f7d8d7-32d4-58b8-aa48-285370aa1675">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>1A1</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:OperationalLimitSet rdf:ID="_e7e0f48f-8e3b-5e2f-b95b-fb228326342a">
+	<cim:OperationalLimitSet.Terminal rdf:resource="#_ca16baa9-1656-5436-93a9-13f7324799a2"/>
+	<cim:IdentifiedObject.name>NANTEL71ZNANT</cim:IdentifiedObject.name>
+</cim:OperationalLimitSet>
+<cim:Terminal rdf:ID="_e865bb43-0844-5690-9b16-234faebf2e8a">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_f443de6c-4c38-5b50-8a85-c2f322569872"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:DCLineSegment rdf:ID="_e98920a4-e297-525d-808c-fbae4fb9a588">
+	<cim:DCLineSegment.resistance>0.2</cim:DCLineSegment.resistance>
+	<cim:IdentifiedObject.name>LILLEL91NANTE</cim:IdentifiedObject.name>
+</cim:DCLineSegment>
+<cim:DCTerminal rdf:ID="_ea102b46-e2db-5587-95ce-d1e7caa45380">
+	<cim:DCTerminal.DCConductingEquipment rdf:resource="#_e98920a4-e297-525d-808c-fbae4fb9a588"/>
+	<cim:DCBaseTerminal.DCNode rdf:resource="#_a9ee9d63-b1db-53dc-bf38-f48346191428"/>
+	<cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEL91NANTE</cim:IdentifiedObject.name>
+</cim:DCTerminal>
+<cim:Terminal rdf:ID="_eb6c4511-3b4f-59d1-b76f-c0945eee4d7e">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_e08bf8fc-3a89-5852-8ad8-ea4b1e7c64bf"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>PHOTO</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:PowerTransformerEnd rdf:ID="_ec61c951-59ca-56c0-aa9a-f3c833683931">
+	<cim:PowerTransformerEnd.b>0</cim:PowerTransformerEnd.b>
+	<cim:PowerTransformerEnd.connectionKind rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#WindingConnection.D"/>
+	<cim:PowerTransformerEnd.g>0</cim:PowerTransformerEnd.g>
+	<cim:PowerTransformerEnd.r>2.3001</cim:PowerTransformerEnd.r>
+	<cim:PowerTransformerEnd.ratedS>70</cim:PowerTransformerEnd.ratedS>
+	<cim:PowerTransformerEnd.ratedU>220.267</cim:PowerTransformerEnd.ratedU>
+	<cim:PowerTransformerEnd.x>79.545</cim:PowerTransformerEnd.x>
+	<cim:PowerTransformerEnd.PowerTransformer rdf:resource="#_4fa294ee-b5ed-5319-a248-c5a8d1be7366"/>
+	<cim:TransformerEnd.endNumber>1</cim:TransformerEnd.endNumber>
+	<cim:TransformerEnd.BaseVoltage rdf:resource="#_63893f24-5b4e-407c-9a1e-4ff71121f33c"/>
+	<cim:TransformerEnd.Terminal rdf:resource="#_9e389824-fcb3-5910-a041-c00f7b8a9301"/>
+	<cim:IdentifiedObject.name>LYON1Y631</cim:IdentifiedObject.name>
+</cim:PowerTransformerEnd>
+<cim:Terminal rdf:ID="_edb09552-aa36-5476-9ae5-e235b599e2c1">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_02d2c776-2bc4-594d-8add-1a29cd67836b"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LYON1L72PARIS</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:CurveData rdf:ID="_edf2ab05-1815-591b-a860-cc3103fd29e7">
+	<cim:CurveData.xvalue>200</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-50</cim:CurveData.y1value>
+	<cim:CurveData.y2value>50</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_2c8682de-b7a1-59d7-b793-e767b8e6d035"/>
+</cim:CurveData>
+<cim:RatioTapChanger rdf:ID="_ee20ad06-2acf-5d5d-b7c2-0466bbd75c64">
+	<cim:RatioTapChanger.stepVoltageIncrement>1.04665</cim:RatioTapChanger.stepVoltageIncrement>
+	<cim:RatioTapChanger.tculControlMode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#TransformerControlMode.volt"/>
+	<cim:RatioTapChanger.TransformerEnd rdf:resource="#_d2a89039-b03e-5c6c-94a2-3825151a97bb"/>
+	<cim:RatioTapChanger.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChanger.highStep>27</cim:TapChanger.highStep>
+	<cim:TapChanger.lowStep>1</cim:TapChanger.lowStep>
+	<cim:TapChanger.ltcFlag>true</cim:TapChanger.ltcFlag>
+	<cim:TapChanger.neutralStep>12</cim:TapChanger.neutralStep>
+	<cim:TapChanger.neutralU>63</cim:TapChanger.neutralU>
+	<cim:TapChanger.normalStep>12</cim:TapChanger.normalStep>
+	<cim:TapChanger.TapChangerControl rdf:resource="#_f8ae4e99-3356-578e-a52e-d82a5760f848"/>
+	<cim:IdentifiedObject.name>LYON1Y631</cim:IdentifiedObject.name>
+</cim:RatioTapChanger>
+<cim:Terminal rdf:ID="_ee7c35a9-bb09-5713-b4b4-a880a14af19a">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_5c8c0422-3630-5950-b555-8cdd978dac48"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>3B2</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:PhaseTapChangerTablePoint rdf:ID="_ef8cc570-c601-5dca-aedd-3cdfeb20f066">
+	<cim:PhaseTapChangerTablePoint.angle>-0</cim:PhaseTapChangerTablePoint.angle>
+	<cim:PhaseTapChangerTablePoint.PhaseTapChangerTable rdf:resource="#_3740a871-4c3d-5bf6-a925-946a5d75a394"/>
+	<cim:TapChangerTablePoint.b>0</cim:TapChangerTablePoint.b>
+	<cim:TapChangerTablePoint.g>0</cim:TapChangerTablePoint.g>
+	<cim:TapChangerTablePoint.r>0</cim:TapChangerTablePoint.r>
+	<cim:TapChangerTablePoint.ratio>1</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>3</cim:TapChangerTablePoint.step>
+	<cim:TapChangerTablePoint.x>-99.6385</cim:TapChangerTablePoint.x>
+</cim:PhaseTapChangerTablePoint>
+<cim:BusbarSection rdf:ID="_f094c5b5-6325-5db6-86ea-7a9ca23c2129">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4dd9513d-c4ad-57ef-b673-1b0c606868d6"/>
+	<cim:IdentifiedObject.name>1.2</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:Terminal rdf:ID="_f435a0ee-13a0-5e38-ab1c-26367f86fde4">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_27429a27-5439-517c-bdbf-2d4bf335f45f"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Breaker rdf:ID="_f443de6c-4c38-5b50-8a85-c2f322569872">
+	<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+	<cim:Switch.retained>true</cim:Switch.retained>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>LILLEP7</cim:IdentifiedObject.name>
+</cim:Breaker>
+<cim:RatioTapChangerTablePoint rdf:ID="_f4b06b85-0290-5237-8123-9ea86a3071aa">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>0.926734</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>5</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Terminal rdf:ID="_f58c2c43-3ffe-5176-bead-2597c86b1321">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_54449b49-b28c-53c7-81b0-0efa7084d53d"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Substation rdf:ID="_f69384a4-3577-5373-ab3c-f438982c860b">
+	<cim:Substation.Region rdf:resource="#_17cf7116-571a-59aa-9988-dd181f33d9b1"/>
+	<cim:IdentifiedObject.name>PARIS</cim:IdentifiedObject.name>
+</cim:Substation>
+<cim:Terminal rdf:ID="_f6a67345-967c-5dd8-bb9a-510c98bb0746">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_c82347b9-d6e3-5b62-a640-a0647292bff1"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1.1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:CurveData rdf:ID="_f6b7eee6-ee82-5839-9532-5006548df75b">
+	<cim:CurveData.xvalue>1000</cim:CurveData.xvalue>
+	<cim:CurveData.y1value>-300</cim:CurveData.y1value>
+	<cim:CurveData.y2value>300</cim:CurveData.y2value>
+	<cim:CurveData.Curve rdf:resource="#_b0146faf-4a18-50b4-a8ac-b1ec6bfe8895"/>
+</cim:CurveData>
+<cim:RegulatingControl rdf:ID="_f77eb14e-c740-591b-8bce-6dc1b991c1de">
+	<cim:RegulatingControl.mode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#RegulatingControlModeKind.voltage"/>
+	<cim:RegulatingControl.Terminal rdf:resource="#_f58c2c43-3ffe-5176-bead-2597c86b1321"/>
+	<cim:IdentifiedObject.name>RDC1</cim:IdentifiedObject.name>
+</cim:RegulatingControl>
+<cim:RatioTapChangerTablePoint rdf:ID="_f7f33cc7-58ca-52e6-b27e-357bf1670cd7">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>1</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>12</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:Terminal rdf:ID="_f82c2d8f-842f-5513-b71e-f0e237bf418d">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_a6906c90-19e1-5d83-80a0-45a45e51eb8a"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1B1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Terminal rdf:ID="_f84003df-d100-5058-927c-cf0e136f30ca">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_c8672a6c-9f49-5337-b0ac-e50dc74c3bf9"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>LOAD7</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:VsCapabilityCurve rdf:ID="_f85bc0d3-e562-5bf9-beac-8d70ecbc94a9">
+	<cim:Curve.curveStyle rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#CurveStyle.straightLineYValues"/>
+	<cim:Curve.xUnit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.W"/>
+	<cim:Curve.y1Unit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.VAr"/>
+	<cim:Curve.y2Unit rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.VAr"/>
+	<cim:IdentifiedObject.name></cim:IdentifiedObject.name>
+</cim:VsCapabilityCurve>
+<cim:TapChangerControl rdf:ID="_f8ae4e99-3356-578e-a52e-d82a5760f848">
+	<cim:RegulatingControl.mode rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#RegulatingControlModeKind.voltage"/>
+	<cim:RegulatingControl.Terminal rdf:resource="#_bb75c271-f548-579e-9b01-3cf4697085bc"/>
+	<cim:IdentifiedObject.name>LYON1Y631</cim:IdentifiedObject.name>
+</cim:TapChangerControl>
+<cim:Breaker rdf:ID="_f90afcc4-48e4-53a0-8c0f-6759e212e39f">
+	<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+	<cim:Switch.retained>true</cim:Switch.retained>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_c7a3ae76-fb12-5572-9a0c-d63feb579ace"/>
+	<cim:IdentifiedObject.name>LYON1P6</cim:IdentifiedObject.name>
+</cim:Breaker>
+<cim:BusbarSection rdf:ID="_f92cb52e-31e1-5f9e-aadb-346859647367">
+	<cim:Equipment.EquipmentContainer rdf:resource="#_4c88a44b-26ac-5a65-8d0a-426b14e1a608"/>
+	<cim:IdentifiedObject.name>2B2</cim:IdentifiedObject.name>
+</cim:BusbarSection>
+<cim:Terminal rdf:ID="_f9313e8f-1ca3-5a8d-92be-fe68367449ae">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_b14ae3ae-98f9-5258-ac94-66f12eec5e8e"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>1A1</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:PowerTransformerEnd rdf:ID="_fa3595c6-4f8a-5708-956a-ab42fe87f0f3">
+	<cim:PowerTransformerEnd.b>0</cim:PowerTransformerEnd.b>
+	<cim:PowerTransformerEnd.connectionKind rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#WindingConnection.D"/>
+	<cim:PowerTransformerEnd.g>0</cim:PowerTransformerEnd.g>
+	<cim:PowerTransformerEnd.r>10</cim:PowerTransformerEnd.r>
+	<cim:PowerTransformerEnd.ratedS>600</cim:PowerTransformerEnd.ratedS>
+	<cim:PowerTransformerEnd.ratedU>400</cim:PowerTransformerEnd.ratedU>
+	<cim:PowerTransformerEnd.x>100</cim:PowerTransformerEnd.x>
+	<cim:PowerTransformerEnd.PowerTransformer rdf:resource="#_7ebfe0f6-d617-5b13-aa2f-ea9bafa603cb"/>
+	<cim:TransformerEnd.endNumber>1</cim:TransformerEnd.endNumber>
+	<cim:TransformerEnd.BaseVoltage rdf:resource="#_65dd04e792584b3b912374e35dec032e"/>
+	<cim:TransformerEnd.Terminal rdf:resource="#_a3e1547f-22b5-5998-90e3-7a14fed9be45"/>
+	<cim:IdentifiedObject.name>LYON1Y761</cim:IdentifiedObject.name>
+</cim:PowerTransformerEnd>
+<cim:OperationalLimitType rdf:ID="_fa5d3427-b187-5e8b-9552-333a2bdaa872">
+	<cim:OperationalLimitType.direction rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#OperationalLimitDirectionKind.absoluteValue"/>
+	<entsoe:OperationalLimitType.limitType rdf:resource="http://entsoe.eu/CIM/SchemaExtension/3/1#LimitTypeKind.patl"/>
+	<cim:IdentifiedObject.name>PATL</cim:IdentifiedObject.name>
+</cim:OperationalLimitType>
+<cim:RatioTapChangerTablePoint rdf:ID="_fa61b27c-cae3-5438-b43e-765091bd74aa">
+	<cim:RatioTapChangerTablePoint.RatioTapChangerTable rdf:resource="#_05b8eee7-8f81-5c33-a31f-67c1460e2b53"/>
+	<cim:TapChangerTablePoint.ratio>0.889494</cim:TapChangerTablePoint.ratio>
+	<cim:TapChangerTablePoint.step>1</cim:TapChangerTablePoint.step>
+</cim:RatioTapChangerTablePoint>
+<cim:LoadResponseCharacteristic rdf:ID="_faf3c86b-9eee-5045-93ed-e434d6cb98f6">
+	<cim:LoadResponseCharacteristic.exponentModel>true</cim:LoadResponseCharacteristic.exponentModel>
+	<cim:LoadResponseCharacteristic.pVoltageExponent>0</cim:LoadResponseCharacteristic.pVoltageExponent>
+	<cim:LoadResponseCharacteristic.qVoltageExponent>0</cim:LoadResponseCharacteristic.qVoltageExponent>
+	<cim:IdentifiedObject.name>LOAD6</cim:IdentifiedObject.name>
+</cim:LoadResponseCharacteristic>
+<cim:CurrentLimit rdf:ID="_fb3ccbc2-3876-5736-84c0-53e22e19c609">
+	<cim:CurrentLimit.value>9999</cim:CurrentLimit.value>
+	<cim:OperationalLimit.OperationalLimitType rdf:resource="#_fa5d3427-b187-5e8b-9552-333a2bdaa872"/>
+	<cim:OperationalLimit.OperationalLimitSet rdf:resource="#_47a1a4a0-388f-5901-94c5-55c829361625"/>
+	<cim:IdentifiedObject.name>BORDEL62LILLE</cim:IdentifiedObject.name>
+</cim:CurrentLimit>
+<cim:Terminal rdf:ID="_fc77cde2-9174-5dd1-8e1b-a658acea6da4">
+	<cim:Terminal.phases rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#PhaseCode.ABC"/>
+	<cim:Terminal.ConductingEquipment rdf:resource="#_b7723de5-3cef-51be-8781-febcd7cac2fc"/>
+	<cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+	<cim:IdentifiedObject.name>TAG</cim:IdentifiedObject.name>
+</cim:Terminal>
+<cim:Breaker rdf:ID="_fd0a7b08-0f21-5ce2-bc07-4a121a7b8821">
+	<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+	<cim:Switch.retained>true</cim:Switch.retained>
+	<cim:Equipment.EquipmentContainer rdf:resource="#_6ff56642-53eb-56e7-a867-43972fd61d92"/>
+	<cim:IdentifiedObject.name>NANCYP6</cim:IdentifiedObject.name>
+</cim:Breaker>
+</rdf:RDF>
