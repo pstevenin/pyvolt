@@ -1,6 +1,11 @@
 import numpy as np
 from enum import Enum
 
+#function to find node root
+def find_root(node_name, connections):
+    while connections[node_name] != node_name:
+        node_name = connections[node_name]
+    return node_name
 
 class BusType(Enum):
     SLACK = 1
@@ -271,11 +276,30 @@ class System():
                 continue
             self.breakers.append(Breaker(from_node=nodes[0], to_node=nodes[1], is_open=is_open))
 
-            #if the breaker is open == closed --> close broker
-            if is_open is False:
-                self.breakers[-1].close_breaker()
-            else:
-                self.breakers[-1].open_breaker()
+        #dictionary to stock connections
+        connections = {node.uuid: node.uuid for node in self.nodes}
+
+        #new indices: connected nodes have the same index, depending on breakers position
+        for breaker in self.breakers:
+            if not breaker.is_open:
+                root_from = find_root(breaker.from_node.uuid, connections)
+                root_to = find_root(breaker.to_node.uuid, connections)
+                if root_from != root_to:
+                    connections[root_to] = root_from
+
+        #update indices in self.nodes
+        for node in self.nodes:
+            root = find_root(node.uuid, connections)
+            node.index = [elem for elem in self.nodes if elem.uuid == root][0].index
+
+        #reassign indices to be consecutive
+        new_index = {}
+        index_count = 0
+        for item in self.nodes:
+            if item.index not in new_index:
+                new_index[item.index] = index_count
+                index_count += 1
+            item.index = new_index[item.index]
 
         #calculate admittance matrix
         self.Ymatrix_calc()
