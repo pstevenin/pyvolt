@@ -126,7 +126,7 @@ class System():
         return nodes_num
 
     def reassign_connected(self):
-        # group nodes per index
+        #group nodes per index
         grouped_objects = {}
         for node in self.nodes:
             idx = node.index
@@ -134,7 +134,7 @@ class System():
                 grouped_objects[idx] = []
             grouped_objects[idx].append(node)
 
-        # attribute ideal_connected_with to each group
+        #attribute ideal_connected_with to each group
         for idx, group in grouped_objects.items():
             found = False
             for obj in group:
@@ -168,6 +168,9 @@ class System():
                              elem.ConductingEquipment.__class__.__name__ == "EnergyConsumer"]
         list_PowerTransformerEnds = [elem for elem in res.values() if elem.__class__.__name__ == "PowerTransformerEnd"]
         list_Breakers = [elem for elem in res.values() if elem.__class__.__name__ == "Breaker"]
+        list_DCLineSegment = [elem for elem in res.values() if elem.__class__.__name__ == "DCLineSegment"]
+        list_DCTerminals = [elem for elem in res.values() if elem.__class__.__name__ == "DCTerminal"]
+        list_VsConverter = [elem for elem in res.values() if elem.__class__.__name__ == "VsConverter"]
 
         #dictionary to get voltage from element name
         value_map = {1: 5, 2: 20, 3: 63, 4: 90, 5: 150, 6: 225, 7: 400, 9: 320}
@@ -187,7 +190,8 @@ class System():
                     vphase = obj_SvVoltage.angle
                     break
             for obj_SvPowerFlow in list_SvPowerFlow:
-                if obj_SvPowerFlow.Terminal.TopologicalNode.mRID == uuid_TPNode:
+                if (obj_SvPowerFlow.Terminal.TopologicalNode.mRID == uuid_TPNode and
+                        obj_SvPowerFlow.Terminal.ConductingEquipment.__class__.__name__ != "VsConverter"):
                     pInj -= obj_SvPowerFlow.p
                     qInj -= obj_SvPowerFlow.q
             for obj_Terminal in list_Terminals_ES:
@@ -238,6 +242,38 @@ class System():
                                         start_node=start_node, end_node=end_node, 
                                         base_voltage=base_voltage, base_apparent_power=base_apparent_power))
 
+            #create branches type DCline
+            for DCLineSegment in list_DCLineSegment:
+                uuid_DCLineSegment = DCLineSegment.mRID
+                start_DCEq = [elem.DCNode.DCEquipmentContainer.mRID for elem in list_DCTerminals if
+                              elem.DCConductingEquipment.mRID != DCLineSegment.mRID and elem.sequenceNumber == 1][0]
+                end_DCEeq = [elem.DCNode.DCEquipmentContainer.mRID for elem in list_DCTerminals if
+                             elem.DCConductingEquipment.mRID != DCLineSegment.mRID and elem.sequenceNumber == 2][0]
+                start_VsConv = [elem.mRID for elem in list_VsConverter if elem.EquipmentContainer.mRID == start_DCEq][0]
+                end_VsConv = [elem.mRID for elem in list_VsConverter if elem.EquipmentContainer.mRID == end_DCEeq][0]
+                start_uuid = [elem.TopologicalNode.mRID for elem in list_Terminals if
+                              elem.ConductingEquipment.mRID == start_VsConv][0]
+                end_uuid = [elem.TopologicalNode.mRID for elem in list_Terminals if
+                            elem.ConductingEquipment.mRID == end_VsConv][0]
+                start_node = self.get_node_by_uuid(start_uuid)
+                end_node = self.get_node_by_uuid(end_uuid)
+
+                #exclude branch connected to at least one node with no voltage
+                if start_node == False or end_node == False:
+                    continue
+
+                #get nominal voltage from line name
+                if DCLineSegment.name[6] in ["B", "T", "G", "P"]:
+                    base_voltage = value_map.get(int(DCLineSegment.name[5]), None)
+                else:
+                    base_voltage = value_map.get(int(DCLineSegment.name[6]), None)
+
+                #TO DO: insert converter station losses
+                self.branches.append(
+                    Branch(uuid=uuid_DCLineSegment, r=DCLineSegment.resistance, x=DCLineSegment.inductance,
+                           start_node=start_node, end_node=end_node,
+                           base_voltage=base_voltage, base_apparent_power=base_apparent_power))
+
         #create branches type powerTransformer
         for power_transformer in list_PowerTransformer:
             uuid_power_transformer = power_transformer.mRID
@@ -278,7 +314,7 @@ class System():
         for branch in self.branches:
             graph_nx.add_edge(branch.start_node.index, branch.end_node.index)
         for breaker in self.breakers:
-            if not breaker.is_open:  # Ajouter uniquement les liens non rompus
+            if not breaker.is_open:  #add non broken links only
                 graph_nx.add_edge(breaker.from_node.index, breaker.to_node.index)
 
         #find related component
